@@ -1,0 +1,390 @@
+/* =========================================================
+   SENAI TCC - ESTILOS UNIFICADOS
+   ========================================================= */
+
+:root {
+  --cor-primaria: #005CA9;
+  --cor-primaria-hover: #004580;
+  --cor-destaque: #FF5500;
+  --cor-destaque-hover: #E04B00;
+  --cor-fundo: #F4F6F9;
+  --cor-fundo-card: #FFFFFF;
+  --cor-texto: #1E293B;
+  --cor-texto-suave: #64748B;
+  --cor-borda: #E2E8F0;
+  --cor-rodape: #0F172A;
+  
+  --transicao: all 0.3s ease;
+  --sombra: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --sombra-hover: 0 10px 25px rgba(0, 0, 0, 0.12);
+  --raio: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   CABEÇALHO PADRÃO (IGUAL EM TODAS AS PÁGINAS)
+   ========================================================= */
+header, .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff !important;
+  border-bottom: 2px solid var(--cor-destaque) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.nav-lista {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cor-texto);
+  padding: 8px 0;
+  position: relative;
+  transition: var(--transicao);
+}
+
+.nav-link:hover,
+.nav-link.ativo {
+  color: var(--cor-primaria);
+}
+
+.nav-link.ativo::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--cor-destaque);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--cor-texto);
+  border-radius: 2px;
+}
+
+/* =========================================================
+   SEÇÃO HERO (PÁGINA INICIAL)
+   ========================================================= */
+.hero {
+  background: linear-gradient(135deg, #0765b3 10%, #003B6D 100%);
+  padding: 70px 24px;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-titulo {
+  color: #ffffff !important;
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.hero-descricao {
+  color: #E2E8F0 !important;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.hero-acoes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.botao-primario {
+  background-color: var(--cor-destaque);
+  color: #ffffff !important;
+}
+
+.botao-primario:hover {
+  background-color: var(--cor-destaque-hover);
+  transform: translateY(-2px);
+}
+
+.botao-secundario {
+  background-color: transparent;
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
+}
+
+.botao-secundario:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.botao-repositorio {
+  background-color: var(--cor-primaria);
+  color: #ffffff !important;
+}
+
+.botao-repositorio:hover {
+  background-color: var(--cor-primaria-hover);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   SEÇÃO SOBRE (CARDS DA HOME)
+   ========================================================= */
+.sobre {
+  padding: 60px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sobre-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sobre-item {
+  background-color: #ffffff;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 28px 20px;
+  box-shadow: var(--sombra);
+  text-align: center;
+  transition: var(--transicao);
+}
+
+.sobre-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-hover);
+}
+
+.sobre-item h3 {
+  color: var(--cor-primaria);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.sobre-item p {
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   REPOSITÓRIO / NÚCLEOS
+   ========================================================= */
+.nucleos {
+  padding: 60px 24px;
+  background-color: #EBF0F5;
+  text-align: center;
+  width: 100%;
+}
+
+.nucleos-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.secao-titulo {
+  color: var(--cor-texto);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.secao-subtitulo {
+  color: var(--cor-texto-suave);
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+
+/* Card da Página Repositório (repositorio.html) */
+.card {
+  background-color: #ffffff;
+  padding: 40px 32px;
+  margin: 40px auto;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  max-width: 950px;
+  width: 90%;
+  text-align: center;
+  border: 1px solid var(--cor-borda);
+  margin-top: 10vh;
+}
+
+#areaCursos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#areaResultado {
+  background-color: #E2E8F0;
+  display: grid;
+  gap: 20px;
+}
+
+.result-area a {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  transition: var(--transicao);
+  background-color: #fff;
+}
+
+.result-area a:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+  border-color: var(--cor-primaria);
+}
+
+.result-area img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   RODAPÉ UNIFICADO
+   ========================================================= */
+.rodape {
+  background-color: var(--cor-rodape);
+  padding: 15px 24px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rodape-logo {
+  height: 4.5vh;
+  filter: brightness(0) invert(1);
+}
+
+.rodape-texto {
+  color: #94A3B8;
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+@media (max-width: 850px) {
+  .sobre-container,
+  .result-area, 
+  #areaResultado {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-lista {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .sobre-container,
+  .result-area, 
+  #areaResultado {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

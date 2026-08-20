@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplicação Web para ajuda em Projetos Integradores do SENAI.">
+  <title>Projeto Integrador — SENAI</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+  <!-- Cabeçalho padrão do projeto -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="marca-senai" aria-label="Página inicial">
+        <img src="imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="logo" />
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="nav-lista">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="" class="nav-link ativo">Como fazer seu TCC</a></li>
+          <li><a href="repositorio.html" class="nav-link">Repositório de Núcleos</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-container">
+        <span class="tag-hero">APLICAÇÃO WEB • PROJETO INTEGRADOR</span>
+        <h1 class="hero-titulo">Ajuda para desenvolver seu Projeto Integrador</h1>
+        <p class="hero-descricao">
+          Organize as principais etapas do projeto e consulte, de forma simples,
+          as orientações importantes para o trabalho escrito, pitch, banca,
+          correções e envio à Biblioteca SENAI.
+        </p>
+
+        <div class="hero-acoes">
+          <a href="#etapas" class="botao botao-primario">Ver etapas</a>
+          <a href="#informacoes" class="botao botao-secundario">Consultar orientações</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo -->
+    <section class="sobre" id="etapas">
+      <div class="secao-cabecalho">
+        <span class="eyebrow">GUIA RÁPIDO</span>
+        <h2 class="secao-titulo">Etapas do Projeto Integrador</h2>
+        <p class="secao-subtitulo">
+          Consulte o que precisa ser feito em cada momento do projeto.
+        </p>
+      </div>
+
+      <div class="etapas-container">
+        <article class="etapa-card">
+          <span class="numero-etapa">01</span>
+          <div>
+            <h3>Trabalho escrito</h3>
+            <p>Documento em PDF, seguindo a estrutura indicada e as normas da ABNT.</p>
+          </div>
+          <span class="etapa-prazo">10 a 15 páginas</span>
+        </article>
+
+        <article class="etapa-card">
+          <span class="numero-etapa">02</span>
+          <div>
+            <h3>Vídeo do Pitch</h3>
+            <p>Apresentação rápida, clara e persuasiva da ideia, solução e protótipo.</p>
+          </div>
+          <span class="etapa-prazo">2 a 3 minutos</span>
+        </article>
+
+        <article class="etapa-card">
+          <span class="numero-etapa">03</span>
+          <div>
+            <h3>Banca de apresentação</h3>
+            <p>Defesa presencial do projeto diante da banca avaliadora.</p>
+          </div>
+          <span class="etapa-prazo">Até 20 minutos</span>
+        </article>
+
+        <article class="etapa-card">
+          <span class="numero-etapa">04</span>
+          <div>
+            <h3>Correções pós-banca</h3>
+            <p>Realização dos ajustes solicitados durante a avaliação do projeto.</p>
+          </div>
+          <span class="etapa-prazo">Após a avaliação</span>
+        </article>
+
+        <article class="etapa-card">
+          <span class="numero-etapa">05</span>
+          <div>
+            <h3>Envio à Biblioteca</h3>
+            <p>Envio do projeto em PDF seguindo as orientações da Biblioteca SENAI.</p>
+          </div>
+          <span class="etapa-prazo">Etapa final</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Orientações importantes: os antigos modais agora ficam visíveis -->
+    <section class="informacoes" id="informacoes">
+      <div class="informacoes-container">
+        <div class="secao-cabecalho centralizado">
+          <span class="eyebrow">INFORMAÇÕES IMPORTANTES</span>
+          <h2 class="secao-titulo">Orientações para cada etapa</h2>
+          <p class="secao-subtitulo">
+            As informações que antes apareciam em modais agora ficam disponíveis
+            diretamente na página, facilitando a consulta.
+          </p>
+        </div>
+
+        <div class="informacoes-grid">
+
+          <!-- Modal visível: Trabalho escrito -->
+          <article class="modal-visivel">
+            <div class="modal-topo">
+              <span class="icone-etapa">01</span>
+              <h2>Trabalho escrito</h2>
+            </div>
+
+            <p>
+              O trabalho escrito deve obedecer às normas da Associação Brasileira
+              de Normas Técnicas (ABNT) para formatação do documento, devendo ter
+              no mínimo 10 e máximo 15 páginas.
+            </p>
+
+            <h3>Estrutura obrigatória</h3>
+            <ul>
+              <li>Capa</li>
+              <li>Resumo</li>
+              <li>Justificativa</li>
+              <li>Objetivos</li>
+              <li>Desenvolvimento</li>
+              <li>Potencial de mercado</li>
+              <li>Viabilidade técnica</li>
+              <li>Viabilidade econômica</li>
+              <li>Protótipo</li>
+              <li>Resultados e conclusões</li>
+              <li>Referências</li>
+            </ul>
+
+            <p class="item-opcional"><strong>Opcional:</strong> apêndices e/ou anexos.</p>
+
+            <div class="caixa-info">
+              O trabalho escrito deve ser entregue em arquivo PDF, no Classroom
+              indicado pelo instrutor, com até dois dias úteis de antecedência
+              da Banca de Apresentação.
+            </div>
+          </article>
+
+          <!-- Modal visível: Pitch -->
+          <article class="modal-visivel">
+            <div class="modal-topo">
+              <span class="icone-etapa">02</span>
+              <h2>O que é um Pitch?</h2>
+            </div>
+
+            <p>
+              Um pitch é uma apresentação rápida e persuasiva de uma ideia,
+              projeto, produto ou serviço. O objetivo é captar a atenção,
+              explicar o contexto, apresentar a solução e demonstrar seus
+              benefícios e viabilidade.
+            </p>
+
+            <h3>Objetivos</h3>
+            <ul>
+              <li><strong>Atrair interesse:</strong> despertar a curiosidade do público.</li>
+              <li><strong>Comunicar valor:</strong> explicar o problema e como a solução o resolve.</li>
+              <li><strong>Gerar ação:</strong> incentivar o público a conhecer melhor o projeto.</li>
+            </ul>
+
+            <h3>Gravação</h3>
+            <ul>
+              <li>Prepare um roteiro e faça ensaios.</li>
+              <li>O vídeo deve ter entre 2 e 3 minutos.</li>
+              <li>Escolha local silencioso, iluminado e com fundo neutro.</li>
+              <li>Grave com a câmera na horizontal.</li>
+              <li>Apresente o protótipo da solução.</li>
+              <li>Mantenha uma apresentação profissional.</li>
+            </ul>
+
+            <div class="caixa-info">
+              Após finalizado, o vídeo deve ser postado no Classroom indicado
+              pelo instrutor, com antecedência de até dois dias úteis antes da banca.
+            </div>
+          </article>
+
+          <!-- Modal visível: Banca -->
+          <article class="modal-visivel">
+            <div class="modal-topo">
+              <span class="icone-etapa">03</span>
+              <h2>Banca de apresentação</h2>
+            </div>
+
+            <p>
+              A banca de apresentação é formada por professores e/ou especialistas
+              que avaliam o trabalho final da equipe. A defesa consiste na
+              apresentação e argumentação sobre o projeto desenvolvido.
+            </p>
+
+            <h3>Composição</h3>
+            <ul>
+              <li>Professor orientador, presidente da banca.</li>
+              <li>Professor coorientador, se houver.</li>
+              <li>Avaliadores internos do SENAI.</li>
+              <li>Avaliadores externos, quando houver.</li>
+            </ul>
+
+            <h3>Objetivos da banca</h3>
+            <ul>
+              <li>Avaliar a qualidade do trabalho.</li>
+              <li>Verificar o domínio dos conhecimentos sobre o tema.</li>
+              <li>Avaliar a capacidade de argumentação e defesa das ideias.</li>
+              <li>Oferecer feedback e sugestões de melhorias.</li>
+            </ul>
+
+            <h3>Apresentação presencial</h3>
+            <ul>
+              <li>Todos os alunos da equipe devem estar presentes.</li>
+              <li>O tempo máximo para defesa é de até 20 minutos.</li>
+              <li>O protótipo da solução deve ser apresentado.</li>
+              <li>O SENAI oferecerá datashow e computador.</li>
+              <li>Devem ser utilizados os slides padrão da instituição.</li>
+              <li>Convidados externos podem assistir à apresentação.</li>
+            </ul>
+          </article>
+
+          <!-- Modal visível: Correções -->
+          <article class="modal-visivel">
+            <div class="modal-topo">
+              <span class="icone-etapa">04</span>
+              <h2>Correções dos trabalhos</h2>
+            </div>
+
+            <p>
+              Ao finalizar a banca, os alunos receberão do orientador os trabalhos
+              corrigidos com as observações realizadas pela banca de defesa.
+            </p>
+
+            <p>
+              A equipe deverá reunir-se com o orientador e realizar os ajustes
+              necessários para encaminhamento à Biblioteca.
+            </p>
+
+            <div class="caixa-info">
+              <strong>Dica:</strong> reúna todas as observações da banca antes
+              de iniciar a revisão final do documento.
+            </div>
+          </article>
+
+          <!-- Modal visível: Biblioteca -->
+          <article class="modal-visivel modal-destaque">
+            <div class="modal-topo">
+              <span class="icone-etapa">05</span>
+              <h2>Envio à Biblioteca SENAI</h2>
+            </div>
+
+            <p>
+              Ao finalizar todas as etapas do TCC, o trabalho deverá ser enviado
+              em formato PDF para a Biblioteca do SENAI Stenio Lopes, por e-mail.
+            </p>
+
+            <div class="dados-envio">
+              <p><strong>E-mail:</strong> bibliotecasenaicepsl@fiepb.org.br</p>
+              <p><strong>Assunto:</strong> TCC-CURSO-TURMA</p>
+              <p><strong>Exemplo:</strong> TCC-GESTÃO-APT.001.343</p>
+            </div>
+
+            <h3>Informações que devem constar no e-mail</h3>
+            <ul>
+              <li>Nome completo</li>
+              <li>Curso</li>
+              <li>Código da turma</li>
+              <li>Turno</li>
+              <li>Instrutor</li>
+              <li>Título do Projeto Integrador</li>
+            </ul>
+
+            <h3>Antes de enviar</h3>
+            <ol>
+              <li>Concluir o tempo mínimo da Unidade Curricular.</li>
+              <li>Ter todas as avaliações realizadas e média de aprovação.</li>
+              <li>Não possuir pendência com a Biblioteca confirmada pela Secretaria Escolar.</li>
+              <li>Enviar somente em PDF.</li>
+              <li>Enviar para o e-mail da Biblioteca para feedback de normalização conforme a ABNT.</li>
+            </ol>
+
+            <div class="caixa-info">
+              Após a validação, compareça à Biblioteca do SENAI para assinatura
+              do Termo de Autorização de Entrega e Publicação do TCC no Repositório,
+              de segunda a sexta-feira, das 7h às 11h e das 13h às 17h.
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Ações de navegação -->
+    <section class="proxima-etapa">
+      <div class="proxima-container">
+        <div>
+          <span class="eyebrow">CONTINUE SUA JORNADA</span>
+          <h2>Precisa de mais materiais?</h2>
+          <p>
+            Acesse as outras áreas do site para consultar o passo a passo do TCC
+            ou trabalhos organizados por curso.
+          </p>
+        </div>
+
+        <div class="hero-acoes">
+          <a href="como-fazer-tcc.html" class="botao botao-repositorio">Como fazer meu TCC</a>
+          <a href="repositorio.html" class="botao botao-outline">Ver repositório</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ <footer class="rodape">
+    <div class="rodape-container">
+      <img src="imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="rodape-logo" />
+      <p class="rodape-texto">&copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de TCC.</p>
+    </div>
+  </footer>
+</body>
+</html>
