@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const cors = require("cors");
+const open = require("open");
 
 const app = express();
 
@@ -10,7 +11,12 @@ app.use(express.static("public"));
 
 const basePath = "C:/Search";
 
-// rota dinâmica
+// redireciona a raiz do site para a página inicial
+app.get("/", (req, res) => {
+  res.redirect("/index.html");
+});
+
+// rota dinâmica da API
 app.get("/api/:pasta", (req, res) => {
 
     const pasta = req.params.pasta;
@@ -37,5 +43,6 @@ app.get("/api/:pasta", (req, res) => {
 app.use("/files", express.static(basePath));
 
 app.listen(3000, () => {
-    console.log("Servidor rodando em http://localhost:3000");
+  console.log("Servidor rodando em http://localhost:3000");
+  open("http://localhost:3000");
 });
