@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SENAI TCC | Página Inicial</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="pagina-inicial">
+
+  <!-- ===================== CABEÇALHO UNIFICADO ===================== -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="logo" />
+      </a>
+
+      <nav class="nav-principal">
+        <ul class="nav-lista">
+          <li><a href="index.html" class="nav-link ativo">Início</a></li>
+          <li><a href="explicacao.html" class="nav-link">Como fazer seu TCC</a></li>
+          <li><a href="repositorio.html" class="nav-link">Repositório de Núcleos</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <!-- ===================== SEÇÃO APRESENTAÇÃO ===================== -->
+  <section class="apresentacao" >
+    <div class="apresentacao-container"></div>
+  </section> 
+  <!-- ===================== SEÇÃO HERO ===================== -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1 class="hero-titulo">Seu Projeto Integrador, do primeiro rascunho à banca final</h1>
+      <p class="hero-descricao">
+        Este espaço reúne tudo o que você precisa para desenvolver seu Trabalho de Conclusão de Curso no SENAI:
+        modelos, orientações por etapa e o acervo de trabalhos organizado por núcleo.
+      </p>
+      <div class="hero-acoes">
+        <a href="explicacao.html" class="botao botao-primario">Como fazer meu TCC</a>
+        <a href="#nucleos" class="botao botao-secundario">Ver acervo por curso</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO SOBRE ===================== -->
+  <section class="sobre">
+    <div class="sobre-container">
+      <div class="sobre-item">
+        <h3>Etapas explicadas</h3>
+        <p>Entenda cada fase do TCC, do tema à apresentação, com linguagem simples e direta.</p>
+      </div>
+      <div class="sobre-item">
+        <h3>Acervo por curso</h3>
+        <p>Consulte trabalhos anteriores organizados por núcleo, direto da nossa biblioteca.</p>
+      </div>
+      <div class="sobre-item">
+        <h3>Sempre atualizado</h3>
+        <p>Os arquivos são sincronizados periodicamente a partir do acervo da biblioteca.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO REPOSITÓRIO ===================== -->
+  <section class="nucleos" id="nucleos">
+    <div class="nucleos-container">
+      <h2 class="secao-titulo">Repositório de núcleos</h2>
+      <p class="secao-subtitulo">
+        Acesse os materiais e trabalhos de conclusão organizados por curso: Automação, Elétrica, Gestão,
+        Metalmecânica, Refrigeração e TI.
+      </p>
+      <a href="repositorio.html" class="botao botao-repositorio">
+        Ver repositório completo
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ UNIFICADO ===================== -->
+  <footer class="rodape">
+    <div class="rodape-container">
+      <img src="imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="rodape-logo" />
+      <p class="rodape-texto">&copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de TCC.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

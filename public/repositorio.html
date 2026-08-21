@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENAI TCC | Repositório Acadêmico</title>
+  <link rel="stylesheet" href="/public/css/repositorio.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO UNIFICADO -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="logo" />
+      </a>
+
+      <nav class="nav-principal">
+        <ul class="nav-lista">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="explicacao.html" class="nav-link">Como fazer seu TCC</a></li>
+          <li><a href="repositorio.html" class="nav-link ativo">Repositório de Núcleos</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL DO REPOSITÓRIO -->
+  <main class="card">
+    <h2>Repositório Acadêmico</h2>
+    <p class="secao-subtitulo">Clique no núcleo desejado para navegar nos arquivos.</p>
+
+    <div class="result-area" id="areaResultado">
+      <a href="automacao.html"><img src="imgs/NucleoAut.png" alt="Automação"></a>
+      <a href="eletrica.html"><img src="imgs/NucleoEletrica.png" alt="Elétrica"></a>
+      <a href="gestao.html"><img src="imgs/NucleoGest.png" alt="Gestão"></a>
+      <a href="metalmecanica.html"><img src="imgs/NucleoMetal.png" alt="Metalmecânica"></a>
+      <a href="refrigeracao.html"><img src="imgs/NucleoRefrigerante.png" alt="Refrigeração"></a>
+      <a href="ti.html"><img src="imgs/NucleoTI.png" alt="TI"></a>
+    </div>
+  </main>
+
+  <!-- RODAPÉ UNIFICADO -->
+  <footer class="rodape">
+    <div class="rodape-container">
+      <img src="imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="rodape-logo" />
+      <p class="rodape-texto">&copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de TCC.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('ano-atual').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

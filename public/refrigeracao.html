@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca Rápida de Arquivos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <img src="imgs/SENAI_logo_2024.png" alt="Logo Senai" id="logo">
+    <nav>
+        
+    </nav>
+</header>
+
+
+<div class="card">
+    <h2>Núcleo de Refrigeração</h2>
+
+    <p style="color: #666; font-size: 20px; margin-bottom: 20px;">
+        Digite o nome do arquivo para a busca.
+    </p>
+
+    
+    <div class="form-group">
+        <a href="repositorio.html" id="aBtn"><img src="imgs/Voltar.png" id="btn" alt="Botão-Voltar"></a>
+        <input type="text" id="nomeArquivo" placeholder="Ex: Tec_Automação" autocomplete="off">
+        
+        <select id="tipoArquivo">
+            <option value=".pdf">PDF</option>
+            <option value=".docx">Word (.docx)</option>
+            <option value=".xlsx">Excel (.xlsx)</option>
+            <option value=".png">Imagem (.png)</option>
+            <option value=".jpg">Imagem (.jpg)</option> 
+        </select>
+    </div>
+    
+    <div class="result-area" id="areaResultado">
+        <!-- <span style="color: #888;">As pastas aparecerão aqui...</span>   -->
+        <ul id="lista"></ul>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
