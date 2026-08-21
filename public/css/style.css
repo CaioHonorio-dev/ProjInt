@@ -153,6 +153,21 @@ header,
   margin: 0 auto;
 }
 
+.apresentacao {
+  background-image: url("/public/imgs/apresentacao.png");
+  padding: 30vh 5vw;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.apresentacao-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
 .tag-hero,
 .eyebrow {
   display: inline-block;
@@ -252,11 +267,38 @@ header,
    ========================================================= */
 
 .sobre {
-  padding: 64px 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
+    padding: 60px 24px;
 }
+
+.sobre-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.sobre-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.sobre-item h3 {
+    color: #2B5FC2;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.sobre-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
 
 .secao-cabecalho {
   margin-bottom: 32px;
@@ -281,6 +323,7 @@ header,
   font-size: 1rem;
   line-height: 1.6;
 }
+
 
 /* =========================================================
    ETAPAS
@@ -557,6 +600,40 @@ header,
 .rodape-texto {
   text-align: right;
 }
+
+ /* ================================ */
+
+.nucleos {
+    padding: 60px 24px 80px;
+    background-color: #eef1f6;
+}
+
+.nucleos-container {
+    max-width: 700px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.secao-titulo {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.secao-subtitulo {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.botao-repositorio {
+    background-color: #2B5FC2;
+    color: #ffffff;
+}
+
+/* ================================== */
+
 
 /* =========================================================
    RESPONSIVIDADE
