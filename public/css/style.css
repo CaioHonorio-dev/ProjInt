@@ -146,6 +146,7 @@ header,
   color: #ffffff;
   text-align: center;
   width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 7git);
 }
 
 .hero-container {
@@ -973,6 +974,73 @@ header,
 #paginacao button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+/* =========================
+   MODO ESCURO
+   ========================= */
+
+body.modo-escuro {
+    --cor-fundo: #0F172A;
+    --cor-fundo-card: #1E293B;
+    --cor-texto: #F1F5F9;
+    --cor-texto-suave: #CBD5E1;
+    --cor-borda: #334155;
+    --cor-rodape: #020617;
+}
+
+/* Cabeçalho */
+
+body.modo-escuro .header {
+    background-color: #1E293B;
+}
+
+/* Cards da seção sobre */
+
+body.modo-escuro .sobre-item {
+    background-color: #1E293B;
+    border-color: #334155;
+}
+
+body.modo-escuro .sobre-item p {
+    color: #CBD5E1;
+}
+
+/* Repositório */
+
+body.modo-escuro .nucleos {
+    background-color: #0F172A;
+}
+
+body.modo-escuro .secao-titulo {
+    color: #F1F5F9;
+}
+
+body.modo-escuro .secao-subtitulo {
+    color: #CBD5E1;
+}
+
+/* Botão do tema */
+
+.tema-toggle {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 50%;
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto);
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transicao);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tema-toggle:hover {
+    transform: scale(1.08);
+    background-color: var(--cor-primaria);
+    color: #ffffff;
 }
 
 /* =========================================================
