@@ -727,7 +727,9 @@ header,
 /* --- Ajuste fino do card padrão quando usado nestas páginas --- */
 .card-repositorio,
 .card-busca {
-  margin: 10vh 5vw;
+  margin: 5vh 5vw;
+  max-height: 25vh;
+  min-height: 25vh;
 }
 
 .card h2 {
@@ -934,6 +936,9 @@ header,
   border-radius: 10px;
   background-color: #ffffff;
   transition: var(--transicao);
+  min-height: 9vh;
+  max-height: 9vh;
+  min-width: 0;
 }
 
 .arq:hover {
@@ -943,43 +948,150 @@ header,
 }
 
 .arq a {
-  display: block;
-  padding: 14px 16px;
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--cor-primaria);
-  word-break: break-word;
+  margin: 1vh 1vw;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 600;
+
+    line-height: 1.3;
 }
 
 /* --- Paginação --- */
 
+/* =========================================================
+   PAGINAÇÃO
+   ========================================================= */
+
+/* =========================================================
+   ÁREA DE RESULTADOS COM ALTURA FIXA
+   ========================================================= */
+
+.result-area {
+  min-height: 25vh;
+  max-height: 25vh;
+}
+
+
+/* =========================================================
+   PAGINAÇÃO FIXA
+   ========================================================= */
+
 #paginacao {
-  grid-column: 1 / -1;
+  width: 100%;
+
+  min-height: 76px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 7vh;
 }
 
-#paginacao button {
-  min-width: 36px;
+
+/* BOTÕES */
+
+.pagina-btn {
+  width: 36px;
   height: 36px;
-  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
   border: 1px solid var(--cor-borda);
-  border-radius: 8px;
+
+  border-radius: 14px;
+
   background-color: #ffffff;
+
   color: var(--cor-texto);
-  font-weight: 600;
+
+  font-size: 1rem;
+  font-weight: 700;
+
   cursor: pointer;
-  transition: var(--transicao);
+
+  box-shadow: var(--sombra);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-#paginacao button:hover:not(:disabled) {
+
+/* HOVER */
+
+.pagina-btn:hover:not(:disabled) {
   border-color: var(--cor-primaria);
+
   color: var(--cor-primaria);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--sombra-hover);
 }
 
-#paginacao button:disabled {
-  opacity: 0.4;
+
+/* PÁGINA ATUAL */
+
+.pagina-btn.pagina-ativa {
+  background-color: var(--cor-primaria);
+
+  border-color: var(--cor-primaria);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 92, 169, 0.28);
+}
+
+
+/* HOVER DA PÁGINA ATUAL */
+
+.pagina-btn.pagina-ativa:hover {
+  background-color: var(--cor-primaria-hover);
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* BOTÃO DESATIVADO */
+
+.pagina-btn:disabled {
+  opacity: 0.45;
+
   cursor: not-allowed;
-}
 
+  background-color: #F8FAFC;
+
+  color: var(--cor-texto-suave);
+
+  box-shadow: none;
+}
 /* =========================
    MODO ESCURO
    ========================= */

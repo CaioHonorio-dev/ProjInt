@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- TÍTULO: troque "TI" pelo núcleo correspondente em cada página (Automação, Elétrica, Gestão...) -->
-  <title>SENAI TCC | Núcleo de TI</title>
+  <!-- TÍTULO: troque "Refrigeração" pelo núcleo correspondente em cada página (Automação, Refrigeração, Gestão...) -->
+  <title>Núcleo de Refrigeração</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
       <nav class="nav-principal">
         <ul class="nav-lista">
           <li><a href="index.html" class="nav-link">Início</a></li>
-          <li><a href="explicacao.html" class="nav-link">Como fazer seu TCC</a></li>
+          <li><a href="explicacao.html" class="nav-link">Como fazer seu Projeto</a></li>
           <li><a href="repositorio.html" class="nav-link ativo">Repositório de Núcleos</a></li>
         </ul>
       </nav>
@@ -40,38 +40,56 @@
       Voltar ao repositório
     </a>
 
-    <!-- Troque "TI" pelo nome do núcleo desta página -->
-    <h2 class="busca-titulo">Núcleo de Refrigeração</h2>    <p class="secao-subtitulo">Digite o nome do arquivo para encontrar o trabalho desejado.</p>
+    <!-- Troque "Refrigeração" pelo nome do núcleo desta página -->
+    <h2 class="busca-titulo">Núcleo de Refrigeração</h2>    <p class="secao-subtitulo">Explore projetos, trabalhos e soluções desenvolvidos na área de Refrigeração.</p>
 
-    <div class="busca-barra">
-      <span class="busca-icone" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="7"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </span>
-      <input type="text" id="nomeArquivo" placeholder="Ex: Tec_Automação" autocomplete="off">
-      <select id="tipoArquivo">
-        <option value="">Todos os tipos</option>
-        <option value=".pdf">PDF</option>
-        <option value=".docx">Word (.docx)</option>
-        <option value=".xlsx">Excel (.xlsx)</option>
-        <option value=".png">Imagem (.png)</option>
-        <option value=".jpg">Imagem (.jpg)</option>
-      </select>
-    </div>
+   <div class="busca-barra">
 
-    <div class="result-area" id="areaResultado">
-      <span class="resultado-vazio">As pastas aparecerão aqui...</span>
-      <ul id="lista"></ul>
-    </div>
+  <span class="busca-icone" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="7"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </span>
+
+  <input
+    type="text"
+    id="nomeArquivo"
+    placeholder="Buscar arquivo..."
+    autocomplete="off"
+  >
+
+  <!-- FILTRO DE ANO -->
+  <select id="anoArquivo" aria-label="Selecionar ano" disabled>
+    <option value="">Carregando anos...</option>
+  </select>
+
+  <!-- FILTRO DE TIPO -->
+  <select id="tipoArquivo" aria-label="Selecionar tipo de arquivo">
+    <option value="">Todos os tipos</option>
+    <option value=".pdf">PDF</option>
+    <option value=".docx">Word (.docx)</option>
+    <option value=".xlsx">Excel (.xlsx)</option>
+    <option value=".png">Imagem (.png)</option>
+    <option value=".jpg">Imagem (.jpg)</option>
+  </select>
+
+</div>
+
+   <div class="result-area" id="areaResultado">
+  <span class="resultado-vazio">
+    As pastas aparecerão aqui...
+  </span>
+</div>
+
+<div id="paginacao"></div>
   </main>
 
   <!-- RODAPÉ UNIFICADO -->
   <footer class="rodape">
     <div class="rodape-container">
       <img src="imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="rodape-logo" />
-      <p class="rodape-texto">&copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de TCC.</p>
+      <p class="rodape-texto">&copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de Projetos integradores.</p>
     </div>
   </footer>
 

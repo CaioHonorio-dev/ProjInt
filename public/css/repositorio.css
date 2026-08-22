@@ -329,6 +329,42 @@ header, .header {
 }
 
 /* =========================================================
+   FILTROS DA BUSCA
+   ========================================================= */
+
+#anoArquivo {
+  min-width: 100px;
+}
+
+#tipoArquivo {
+  min-width: 150px;
+}
+
+.busca-barra select {
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.busca-barra select:hover {
+  background-color: #F1F5F9;
+}
+
+.busca-barra select:focus {
+  box-shadow:
+    0 0 0 3px rgba(0, 92, 169, 0.12);
+}
+
+/* Página ativa da paginação */
+
+#paginacao button.pagina-ativa {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+/* =========================================================
    RODAPÉ UNIFICADO
    ========================================================= */
 .rodape {
