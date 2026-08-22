@@ -139,14 +139,31 @@ header,
 /* =========================================================
    HERO
    ========================================================= */
+   .apresentacao {
+     background-image: url("/public/imgs/apresentacao.png");
+     padding: 30vh 5vw;
+     color: #ffffff;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+   
+   }
+   
+   .apresentacao-container {
+     max-width: 850px;
+     margin: 0 auto;
+   }
 
 .hero {
+  position: sticky;
   background: linear-gradient(180deg, #1258b4 40%, #002c6e 100%);
   padding: 72px 24px;
   color: #ffffff;
   text-align: center;
   width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 7git);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 4);
+  /* border-radius: 20px 40px 0 0; */
+  border-top: 4px solid var(--cor-destaque);
 }
 
 .hero-container {
@@ -154,20 +171,6 @@ header,
   margin: 0 auto;
 }
 
-.apresentacao {
-  background-image: url("/public/imgs/apresentacao.png");
-  padding: 30vh 5vw;
-  color: #ffffff;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-}
-
-.apresentacao-container {
-  max-width: 850px;
-  margin: 0 auto;
-}
 
 .tag-hero,
 .eyebrow {
@@ -724,7 +727,7 @@ header,
 /* --- Ajuste fino do card padrão quando usado nestas páginas --- */
 .card-repositorio,
 .card-busca {
-  margin-top: 6vh;
+  margin: 10vh 5vw;
 }
 
 .card h2 {
@@ -735,7 +738,7 @@ header,
 }
 
 .card .secao-subtitulo {
-  margin-bottom: 32px;
+  margin-bottom: 92px;
 }
 
 /* =========================================================
@@ -744,9 +747,10 @@ header,
 
 .nucleos-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
   text-align: left;
+  margin: 0 5vh;
 }
 
 .nucleo-card {
