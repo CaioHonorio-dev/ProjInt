@@ -139,20 +139,20 @@ header,
 /* =========================================================
    HERO
    ========================================================= */
-   .apresentacao {
-     background-image: url("/public/imgs/apresentacao.png");
-     padding: 30vh 5vw;
-     color: #ffffff;
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
-   
-   }
-   
-   .apresentacao-container {
-     max-width: 850px;
-     margin: 0 auto;
-   }
+.apresentacao {
+  background-image: url("imgs/apresentacao.png");
+  padding: 30vh 5vw;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.apresentacao-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
 
 .hero {
   position: sticky;
@@ -271,36 +271,36 @@ header,
    ========================================================= */
 
 .sobre {
-    padding: 60px 24px;
+  padding: 60px 24px;
 }
 
 .sobre-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .sobre-item {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 24px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
-    text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+  text-align: center;
 }
 
 .sobre-item h3 {
-    color: #2B5FC2;
-    margin-bottom: 10px;
-    font-size: 18px;
+  color: #2B5FC2;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .sobre-item p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
 }
 
 
@@ -570,9 +570,9 @@ header,
    ========================================================= */
 
 .rodape {
+  margin-top: auto;
   background-color: var(--cor-rodape);
   padding: 15px 24px;
-  margin-top: auto;
   width: 100%;
 }
 
@@ -605,35 +605,35 @@ header,
   text-align: right;
 }
 
- /* ================================ */
+/* ================================ */
 
 .nucleos {
-    padding: 60px 24px 80px;
-    background-color: #eef1f6;
+  padding: 60px 24px 80px;
+  background-color: #eef1f6;
 }
 
 .nucleos-container {
-    max-width: 700px;
-    margin: 0 auto; 
-    text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .secao-titulo {
-    color: #333;
-    font-size: 26px;
-    margin-bottom: 10px;
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 .secao-subtitulo {
-    color: #555;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 28px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
 }
 
 .botao-repositorio {
-    background-color: #2B5FC2;
-    color: #ffffff;
+  background-color: #2B5FC2;
+  color: #ffffff;
 }
 
 /* ================================== */
@@ -727,7 +727,10 @@ header,
 /* --- Ajuste fino do card padrão quando usado nestas páginas --- */
 .card-repositorio,
 .card-busca {
-  margin: 5vh 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 65vh;
+  margin-top: 7vh;
   max-height: 25vh;
   min-height: 25vh;
 }
@@ -740,7 +743,7 @@ header,
 }
 
 .card .secao-subtitulo {
-  margin-bottom: 92px;
+  margin-bottom: 9vh;
 }
 
 /* =========================================================
@@ -932,6 +935,9 @@ header,
 }
 
 .arq {
+  display: flex;
+  text-align: center;
+  align-items: center;
   border: 1px solid var(--cor-borda);
   border-radius: 10px;
   background-color: #ffffff;
@@ -956,15 +962,15 @@ header,
   font-weight: 600;
   margin: 1vh 1vw;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    text-overflow: ellipsis;
+  text-overflow: ellipsis;
 
-    color: var(--cor-primaria);
-    text-decoration: none;
-    font-weight: 600;
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 600;
 
-    line-height: 1.3;
+  line-height: 1.3;
 }
 
 /* --- Paginação --- */
@@ -1063,8 +1069,7 @@ header,
   color: #ffffff;
 
   box-shadow:
-    0 8px 20px
-    rgba(0, 92, 169, 0.28);
+    0 8px 20px rgba(0, 92, 169, 0.28);
 }
 
 
@@ -1092,72 +1097,75 @@ header,
 
   box-shadow: none;
 }
+
 /* =========================
    MODO ESCURO
    ========================= */
 
 body.modo-escuro {
-    --cor-fundo: #0F172A;
-    --cor-fundo-card: #1E293B;
-    --cor-texto: #F1F5F9;
-    --cor-texto-suave: #CBD5E1;
-    --cor-borda: #334155;
-    --cor-rodape: #020617;
+  --cor-fundo: #0F172A;
+  --cor-fundo-card: #1E293B;
+  --cor-texto: #F1F5F9;
+  --cor-texto-suave: #CBD5E1;
+  --cor-borda: #334155;
+  --cor-rodape: #020617;
 }
 
 /* Cabeçalho */
 
 body.modo-escuro .header {
-    background-color: #1E293B;
+  background-color: #1E293B;
 }
 
 /* Cards da seção sobre */
 
 body.modo-escuro .sobre-item {
-    background-color: #1E293B;
-    border-color: #334155;
+  background-color: #1E293B;
+  border-color: #334155;
 }
 
 body.modo-escuro .sobre-item p {
-    color: #CBD5E1;
+  color: #CBD5E1;
 }
 
 /* Repositório */
 
 body.modo-escuro .nucleos {
-    background-color: #0F172A;
+  background-color: #0F172A;
 }
 
 body.modo-escuro .secao-titulo {
-    color: #F1F5F9;
+  color: #F1F5F9;
 }
 
 body.modo-escuro .secao-subtitulo {
-    color: #CBD5E1;
+  color: #CBD5E1;
 }
 
 /* Botão do tema */
 
 .tema-toggle {
-    width: 42px;
-    height: 42px;
-    border: 1px solid var(--cor-borda);
-    border-radius: 50%;
-    background-color: var(--cor-fundo-card);
-    color: var(--cor-texto);
-    font-size: 20px;
-    cursor: pointer;
-    transition: var(--transicao);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  background-color: var(--cor-fundo-card);
+  color: var(--cor-texto);
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--transicao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tema-toggle:hover {
-    transform: scale(1.08);
-    background-color: var(--cor-primaria);
-    color: #ffffff;
+  transform: scale(1.08);
+  background-color: var(--cor-primaria);
+  color: #ffffff;
 }
+
+
 
 /* =========================================================
    RESPONSIVIDADE
@@ -1174,6 +1182,7 @@ body.modo-escuro .secao-subtitulo {
 }
 
 @media (max-width: 600px) {
+
   .nucleos-grid,
   .result-area {
     grid-template-columns: 1fr;

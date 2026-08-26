@@ -1,0 +1,562 @@
+/* =========================================================
+   PÁGINA DE LOGIN / REGISTRO
+   Depende de css/style.css (tokens :root, .botao, etc.)
+   ========================================================= */
+
+:root {
+    --cor-primaria: #005CA9;
+    --cor-primaria-hover: #004580;
+    --cor-destaque: #FF5500;
+    --cor-destaque-hover: #E04B00;
+    --cor-fundo: #F4F6F9;
+    --cor-fundo-card: #FFFFFF;
+    --cor-texto: #1E293B;
+    --cor-texto-suave: #64748B;
+    --cor-borda: #E2E8F0;
+    --cor-rodape: #0F172A;
+
+    --transicao: all 0.3s ease;
+    --sombra: 0 4px 20px rgba(0, 0, 0, 0.06);
+    --sombra-hover: 0 10px 25px rgba(0, 0, 0, 0.12);
+    --raio: 12px;
+}
+
+.pagina-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    background:
+        radial-gradient(circle at 14% 20%, rgba(255, 255, 255, 0.07), transparent 42%),
+        radial-gradient(circle at 90% 85%, rgba(255, 255, 255, 0.06), transparent 46%),
+        linear-gradient(160deg, #0a3d8f 0%, #06255c 65%, #041a44 100%);
+}
+
+.login-shell {
+    width: 100%;
+    max-width: 1180px;
+    min-height: 640px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--cor-fundo-card);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(2, 12, 40, 0.45);
+}
+
+/* ---------- LADO ESQUERDO (institucional) ---------- */
+
+.login-vitrine {
+    position: relative;
+    background: linear-gradient(165deg, #0f5fc4 0%, #0a3d8f 55%, #062a68 100%);
+    color: #ffffff;
+    padding: 48px 44px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.login-vitrine-pontos {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    opacity: 0.35;
+}
+
+.login-vitrine-pontos span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.login-vitrine-mais {
+    position: absolute;
+    bottom: 32px;
+    left: 40px;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 300;
+}
+
+.login-vitrine-circulo {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+}
+
+.login-logo {
+    display: block;
+    height: 6vh;
+    width: 26vh;
+    filter: brightness(0) invert(1);
+}
+
+.login-vitrine-corpo {
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    max-width: 420px;
+}
+
+.login-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 22px;
+}
+
+.login-titulo {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.18;
+    margin-bottom: 18px;
+}
+
+.login-titulo .destaque {
+    color: var(--cor-destaque);
+}
+
+.login-descricao {
+    color: #E2E8F0;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.login-recursos {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.login-recurso {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.06);
+    transition: var(--transicao);
+}
+
+.login-recurso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.login-recurso-icone {
+    flex: 0 0 auto;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background-color: var(--cor-destaque);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-recurso-icone svg {
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+}
+
+.login-recurso-texto strong {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.login-recurso-texto span {
+    font-size: 0.8rem;
+    color: #C9DDF5;
+    line-height: 1.4;
+}
+
+/* ---------- LADO DIREITO (formulário) ---------- */
+
+.login-form-lado {
+    padding: 48px 56px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-abas {
+    display: flex;
+    gap: 28px;
+    border-bottom: 1px solid var(--cor-borda);
+    margin-bottom: 32px;
+}
+
+.login-aba {
+    background: none;
+    border: none;
+    padding: 8px 2px 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-texto-suave);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transicao);
+}
+
+.login-aba:hover {
+    color: var(--cor-primaria);
+}
+
+.login-aba.ativa {
+    color: var(--cor-primaria);
+}
+
+.login-aba.ativa::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+    background-color: var(--cor-destaque);
+}
+
+.login-painel {
+    display: none;
+}
+
+.login-painel.ativo {
+    display: block;
+}
+
+.login-boas-vindas {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.login-boas-vindas-icone {
+    flex: 0 0 auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #EAF3FB;
+    color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-boas-vindas-icone svg {
+    width: 22px;
+    height: 22px;
+}
+
+.login-boas-vindas h1 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--cor-texto);
+    margin-bottom: 2px;
+}
+
+.login-boas-vindas p {
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+}
+
+.campo-linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.campo-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: var(--transicao);
+}
+
+.campo-input:focus-within {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(0, 92, 169, 0.12);
+}
+
+.campo-input svg {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    color: var(--cor-texto-suave);
+}
+
+.campo-input input {
+    flex: 1 1 auto;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 13px 0;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    background: transparent;
+}
+
+.campo-input input::placeholder {
+    color: #A5B2C4;
+}
+
+.campo-input .alterna-senha {
+    flex: 0 0 auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    color: var(--cor-texto-suave);
+    padding: 4px;
+}
+
+.campo-input .alterna-senha:hover {
+    color: var(--cor-primaria);
+}
+
+.campo-termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 22px;
+    font-size: 0.85rem;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.campo-termos input {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: var(--cor-primaria);
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.campo-termos a {
+    color: var(--cor-primaria);
+    font-weight: 600;
+}
+
+.campo-termos a:hover {
+    text-decoration: underline;
+}
+
+.login-opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    font-size: 0.86rem;
+}
+
+.login-lembrar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cor-texto);
+    cursor: pointer;
+}
+
+.login-lembrar input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.login-esqueci {
+    color: var(--cor-primaria);
+    font-weight: 600;
+}
+
+.login-esqueci:hover {
+    text-decoration: underline;
+}
+
+.botao-login {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    font-weight: 600;
+    width: 100%;
+    padding: 14px 24px;
+    gap: 8px;
+    border: none;
+}
+
+.botao-login:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+}
+
+.botao-login svg {
+    width: 16px;
+    height: 16px;
+}
+
+.login-divisor {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 26px 0;
+    color: var(--cor-texto-suave);
+    font-size: 0.82rem;
+}
+
+.login-divisor::before,
+.login-divisor::after {
+    content: '';
+    flex: 1 1 auto;
+    height: 1px;
+    background-color: var(--cor-borda);
+}
+
+.login-card-troca {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px;
+    background-color: #F8FAFC;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+}
+
+.login-card-troca-icone {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #EAF3FB;
+    color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card-troca-icone svg {
+    width: 20px;
+    height: 20px;
+}
+
+.login-card-troca-texto {
+    flex: 1 1 auto;
+}
+
+.login-card-troca-texto strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    margin-bottom: 2px;
+}
+
+.login-card-troca-texto p {
+    font-size: 0.82rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 12px;
+}
+
+.botao-card-troca {
+    width: 100%;
+    gap: 8px;
+}
+
+.botao-card-troca svg {
+    width: 16px;
+    height: 16px;
+}
+
+.erro-campo {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    color: #DC2626;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.campo.invalido .campo-input {
+    border-color: #DC2626;
+}
+
+.campo.invalido .erro-campo {
+    display: flex;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 980px) {
+    .login-shell {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+    }
+
+    .login-vitrine {
+        display: none;
+    }
+
+    .login-form-lado {
+        padding: 40px 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina-login {
+        padding: 0;
+    }
+
+    .login-shell {
+        min-height: 100vh;
+        border-radius: 0;
+        max-width: none;
+    }
+
+    .login-form-lado {
+        padding: 32px 22px;
+        justify-content: center;
+    }
+
+    .campo-linha {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

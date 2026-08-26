@@ -370,7 +370,7 @@ header, .header {
 .rodape {
   background-color: var(--cor-rodape);
   padding: 15px 24px;
-  margin-top: auto;
+  /* margin-top: auto; */
   width: 100%;
 }
 
