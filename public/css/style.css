@@ -1098,75 +1098,174 @@ header,
   box-shadow: none;
 }
 
-/* =========================
-   MODO ESCURO
-   ========================= */
-
-body.modo-escuro {
-  --cor-fundo: #0F172A;
-  --cor-fundo-card: #1E293B;
-  --cor-texto: #F1F5F9;
-  --cor-texto-suave: #CBD5E1;
-  --cor-borda: #334155;
-  --cor-rodape: #020617;
-}
-
-/* Cabeçalho */
-
-body.modo-escuro .header {
-  background-color: #1E293B;
-}
-
-/* Cards da seção sobre */
-
-body.modo-escuro .sobre-item {
-  background-color: #1E293B;
-  border-color: #334155;
-}
-
-body.modo-escuro .sobre-item p {
-  color: #CBD5E1;
-}
-
-/* Repositório */
-
-body.modo-escuro .nucleos {
-  background-color: #0F172A;
-}
-
-body.modo-escuro .secao-titulo {
-  color: #F1F5F9;
-}
-
-body.modo-escuro .secao-subtitulo {
-  color: #CBD5E1;
-}
-
-/* Botão do tema */
-
+/* ============================
+   BOTÃO DO TEMA
+   ============================ */
 .tema-toggle {
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--cor-borda);
-  border-radius: 50%;
-  background-color: var(--cor-fundo-card);
-  color: var(--cor-texto);
-  font-size: 20px;
-  cursor: pointer;
-  transition: var(--transicao);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 5px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
 }
-
+/* Tamanho do SVG */
+.tema-toggle svg {
+    width: 25px;
+    height: 25px;
+}
+/* Efeito ao passar o mouse */
 .tema-toggle:hover {
-  transform: scale(1.08);
-  background-color: var(--cor-primaria);
-  color: #ffffff;
+    transform: scale(1.08);
+}
+/* ============================
+   BOTÃO NO MODO ESCURO
+   ============================ */
+body.modo-escuro .tema-toggle {
+    border-color: #D1D5DB;
+    background-color: #111827;
+}
+/* ============================
+   CABEÇALHO
+   ============================ */
+body.modo-escuro .header {
+    background-color: #1F2937;
+}
+/* ============================
+   CARDS
+   ============================ */
+/* FUNDO GERAL */
+body.modo-escuro {
+    background-color: #111827;
+    color: #F9FAFB;
+}
+/* TODAS AS SEÇÕES */
+body.modo-escuro section {
+    background-color: #111827;
+}
+/* HERO */
+body.modo-escuro .hero {
+    background-color: #111827;
+}
+body.modo-escuro .hero-titulo,
+body.modo-escuro .hero-descricao {
+    color: #F9FAFB;
+}
+/* APRESENTAÇÃO */
+body.modo-escuro .apresentacao {
+    background-color: #111827;
+}
+/* GUIA RÁPIDO / ETAPAS */
+body.modo-escuro .guia-rapido,
+body.modo-escuro .informacoes,
+body.modo-escuro .informacoes-container {
+    background-color: #111827;
+}
+body.modo-escuro .etapa {
+    background-color: #1F2937;
+    border-color: #374151;
+}
+body.modo-escuro .etapa h3,
+body.modo-escuro .etapa p {
+    color: #F9FAFB;
+}
+/* RODAPÉ */
+body.modo-escuro .rodape {
+    background-color: #030712;
+}
+body.modo-escuro .sobre-item {
+    background-color: #1F2937;
+    border-color: #D1D5DB;
+}
+body.modo-escuro .sobre-item p {
+    color: #D1D5DB;
+}
+/* ============================
+   REPOSITÓRIO
+   ============================ */
+body.modo-escuro .nucleos {
+    background-color: #111827;
+}
+body.modo-escuro .secao-titulo {
+    color: #F9FAFB;
+}
+body.modo-escuro .secao-subtitulo {
+    color: #D1D5DB;
+}
+body.modo-escuro .nucleo-icone {
+  background-color: #2a364e;
+}
+body.modo-escuro .etapa-prazo {
+  background-color: #2a364e;
+}
+body.modo-escuro .informacoes-container {
+  background-color: #111827;
+}
+body.modo-escuro #informacoes.informacoes {
+  background-color: #111827;
+}
+body.modo-escuro .modal-visivel {
+  background-color: #1F2937;
+}
+body.modo-escuro .caixa-info {
+  background-color: #111827;
+}
+body.modo-escuro .dados-envio {
+  background-color: #2a364e;
+}
+body.modo-escuro .proxima-etapa {
+  background-color: #1F2937;
+}
+body.modo-escuro .icone-etapa {
+  background-color: #2a364e;
+}
+body.modo-escuro .nav-link {
+  color: white;
+}
+body.modo-escuro .nav-link.ativo {
+  color: #005CA9;
+}
+body.modo-escuro section.sobre {
+    color: #1E293B;
+}
+body.modo-escuro .etapa-card{
+    background-color: #1F2937;
+}
+body.modo-escuro .numero-etapa {
+  background-color: #2a364e;
+}
+body.modo-escuro p {
+  color: white;
+}
+body.modo-escuro h2{
+  color: #005CA9;
+}
+body.modo-escuro .nucleo-card{
+  background-color: #1F2937;
+}
+body.modo-escuro .nucleo-nome{
+  color: #005CA9;
+}
+body.modo-escuro .caixa-info {
+  color: white;
+} 
+body.modo-escuro .botao-acessibilidade{
+  background-color: #2a364e;
+  border: white;
+  color: white;
+}
+body.modo-escuro .botao-acessibilidade svg {
+  color: white;
 }
 
-
-
+body.modo-escuro .busca-barra{
+  background-color: #1F2937;
+}
 /* =========================================================
    RESPONSIVIDADE
    ========================================================= */
