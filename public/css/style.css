@@ -1355,7 +1355,7 @@ body.modo-escuro #informacoes.informacoes {
 
 body.modo-escuro .modal-visivel {
   background-color: #1F2937;
-  border: var(--cor-texto-suave) 1px solid;
+  border: none;
 }
 
 body.modo-escuro .caixa-info {
@@ -1379,7 +1379,7 @@ body.modo-escuro .nav-link {
   color: white;
 }
 
-body.modo-escuro .nav-link.ativo {
+body.modo-escuro .nav-link.ativo, .nav-link:hover {
   color: #005CA9;
 }
 
@@ -1389,7 +1389,7 @@ body.modo-escuro section.sobre {
 
 body.modo-escuro .etapa-card {
   background-color: #1F2937;
-  border: var(--cor-texto-suave) 1px solid;
+  border: none;
 }
 
 body.modo-escuro .numero-etapa {
@@ -1406,7 +1406,7 @@ body.modo-escuro h2 {
 
 body.modo-escuro .nucleo-card {
   background-color: #1F2937;
-  border: var(--cor-texto-suave) 1px solid;
+  border: none;
 }
 
 body.modo-escuro .nucleo-nome {
@@ -1429,8 +1429,35 @@ body.modo-escuro .botao-acessibilidade svg {
 
 body.modo-escuro .busca-barra {
   background-color: #1F2937;
+  border: none;
 }
 
+body.modo-escuro .botao-voltar {
+  background-color: #1f2937;
+  color: var(--cor-texto-suave);
+  border: none;
+}
+
+body.modo-escuro .botao-voltar:hover {
+  background-color: #2a364e;
+  color: var(--cor-texto);
+  color: white;
+  border: none;
+}
+
+body.modo-escuro .busca-barra select {
+  background-color: #2a364e;
+  color: rgba(255, 255, 255, 0.733);
+  border: none;
+}
+
+body.modo-escuro .arq{
+  background-color: #1F2937;
+  border: none;
+}
+body.modo-escuro .arq a{
+    color: rgba(189, 211, 230, 0.623);
+}
 
 /* =========================================================
    RESPONSIVIDADE
