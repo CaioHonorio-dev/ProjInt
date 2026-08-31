@@ -10,28 +10,31 @@
 <body>
 
   <!-- CABEÇALHO UNIFICADO -->
-  <header class="header">
+   <header class="header">
     <div class="header-container">
-      <a href="index.html" class="logo-link">
+      <a href="index.html" class="marca-senai" aria-label="Página inicial">
         <img src="css/imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="logo" />
       </a>
-      <nav class="nav-principal">
+
+      <nav aria-label="Navegação principal">
         <ul class="nav-lista">
           <li><a href="index.html" class="nav-link">Início</a></li>
           <li><a href="explicacao.html" class="nav-link">Como fazer seu Projeto</a></li>
           <li><a href="repositorio.html" class="nav-link ativo">Repositório de Núcleos</a></li>
+          <li><a href="normasabnt.html" class="nav-link">Normas ABNT</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" aria-label="Abrir menu">
+
+      <!-- ===================== MODO ESCURO ===================== -->
+      <button class="tema-toggle" id="temaToggle" aria-label="Ativar modo escuro">
+        <svg id="iconeTema" width="25" height="25" viewBox="0 0 24 24"></svg>
+      </button>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
-                      <!-- ===================== MODO ESCURO ===================== -->
-                      <button class="tema-toggle" id="temaToggle" aria-label="Ativar modo escuro">
-                        <svg id="iconeTema" width="25" height="25" viewBox="0 0 24 24"></svg>
-                      </button>
     </div>
   </header>
 
@@ -178,6 +181,7 @@
     </div>
   </footer>
 
+  <script src="js/script.js"></script>
   <script src="js/script2.js"></script>
   <script>
     document.getElementById('ano-atual').textContent = new Date().getFullYear();
