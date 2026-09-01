@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const ArquivoModel = require("./BackEnd/src/Models/ArquivoModel");
+const ArquivoModel = require("./BackEnd/src/models/arquivoModel");
 const arquivoRoutes = require("./BackEnd/src/routes/arquivoRoutes");
 const authRoutes = require("./BackEnd/src/routes/authRoutes");
 

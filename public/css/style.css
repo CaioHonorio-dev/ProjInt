@@ -162,7 +162,15 @@ header,
   text-align: center;
   width: 100%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 4);
-  /* border-radius: 20px 40px 0 0; */
+}
+.hero-init {
+  position: sticky;
+  background: linear-gradient(180deg, #1258b4 40%, #002c6e 100%);
+  padding: 72px 24px;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 4);
   border-top: 4px solid var(--cor-destaque);
 }
 
@@ -1473,12 +1481,25 @@ body.modo-escuro .arq:hover{
 }
 
 body.modo-escuro .arq a{
-    color: rgba(189, 211, 230, 0.623);
-}
+  color: #D1D5DB;}
 
 body.modo-escuro .logo{
     filter: brightness(100);
 }
+
+body.modo-escuro .pagina-btn {
+  background-color: #1F2937;
+  border: 1px solid #374151;
+  color: #D1D5DB;
+}
+
+body.modo-escuro .pagina-ativa {
+  background-color: #374151;
+  border-color: #374151;
+  color: #D1D5DB;
+  box-shadow: 0 8px 20px #354151;
+}
+
 
 /* =========================================================
    RESPONSIVIDADE
