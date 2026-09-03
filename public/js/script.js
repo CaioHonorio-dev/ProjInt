@@ -1,4 +1,6 @@
-let data = [];
+const API_BASE_URL = "https://backend-nuvem-8x44.onrender.com";
+
+let data = []; // Array global para armazenar os arquivos carregados
 
 const inputNome = document.getElementById("nomeArquivo");
 const areaResultado = document.getElementById("areaResultado");
@@ -309,7 +311,7 @@ async function carregarAnos() {
 
 
         const resposta = await fetch(
-            `/api/${encodeURIComponent(nucleo)}/anos`
+            `${API_BASE_URL}/api/${encodeURIComponent(nucleo)}/anos`
         );
 
 
@@ -401,7 +403,7 @@ async function carregarArquivosDoAno(ano) {
     try {
 
         const resposta = await fetch(
-            `/api/${encodeURIComponent(nucleo)}/${encodeURIComponent(ano)}`
+            `${API_BASE_URL}/api/${encodeURIComponent(nucleo)}/${encodeURIComponent(ano)}`
         );
 
 
