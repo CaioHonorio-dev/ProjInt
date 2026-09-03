@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia de como montar cada slide da apresentação do Projeto Integrador do SENAI.">
+    <title>Como montar seus slides | SENAI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho padrão do projeto -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="marca-senai" aria-label="Página inicial">
+                <img src="css/imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="logo" />
+            </a>
+
+            <nav aria-label="Navegação principal">
+                <ul class="nav-lista">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="explicacao.html" class="nav-link">Como fazer seu Projeto</a></li>
+                    <li><a href="repositorio.html" class="nav-link">Repositório de Núcleos</a></li>
+                    <li><a href="normasabnt.html" class="nav-link">Normas ABNT</a></li>
+                    <li><a href="slide.html" class="nav-link ativo">Slides da Apresentação</a></li>
+                </ul>
+            </nav>
+
+            <!-- ===================== MODO ESCURO ===================== -->
+            <button class="tema-toggle" id="temaToggle" aria-label="Ativar modo escuro">
+                <svg id="iconeTema" width="25" height="25" viewBox="0 0 24 24"></svg>
+            </button>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-container">
+                <span class="tag-hero">GUIA DE APOIO • SLIDES DA APRESENTAÇÃO</span>
+                <h1 class="hero-titulo">Como montar os slides da sua apresentação</h1>
+                <p class="hero-descricao">
+                    Slide a slide do modelo padrão do SENAI: o que colocar em cada um,
+                    qual a função dele na apresentação, como ele ajuda na hora de falar
+                    e como ter um ótimo desempenho na frente da banca.
+                </p>
+
+                <div class="hero-acoes">
+                    <a href="#roteiro" class="botao botao-primario">Ver o roteiro</a>
+                    <a href="#desempenho" class="botao botao-secundario">Dicas de desempenho</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guia rápido -->
+        <section class="sobre" id="roteiro">
+            <div class="secao-cabecalho">
+                <span class="eyebrow">GUIA RÁPIDO</span>
+                <h2 class="secao-titulo">As 4 partes da sua apresentação</h2>
+                <p class="secao-subtitulo">
+                    Os 11 slides do modelo se agrupam em 4 momentos. Pense neles como
+                    blocos ao ensaiar a fala da equipe.
+                </p>
+            </div>
+
+            <div class="etapas-container">
+                <article class="etapa-card">
+                    <span class="numero-etapa">01</span>
+                    <div>
+                        <h3>Abertura</h3>
+                        <p>Capa e apresentação do projeto: quem é a equipe e o que foi feito.</p>
+                    </div>
+                    <span class="etapa-prazo">~1 min</span>
+                </article>
+
+                <article class="etapa-card">
+                    <span class="numero-etapa">02</span>
+                    <div>
+                        <h3>Problema e solução</h3>
+                        <p>Por que o projeto existe e qual é a proposta da equipe para resolvê-lo.</p>
+                    </div>
+                    <span class="etapa-prazo">O coração do pitch</span>
+                </article>
+
+                <article class="etapa-card">
+                    <span class="numero-etapa">03</span>
+                    <div>
+                        <h3>Provas e viabilidade</h3>
+                        <p>Resultados, protótipo, viabilidade técnica, mercado e custos.</p>
+                    </div>
+                    <span class="etapa-prazo">Convence a banca</span>
+                </article>
+
+                <article class="etapa-card">
+                    <span class="numero-etapa">04</span>
+                    <div>
+                        <h3>Fechamento</h3>
+                        <p>Conclusão do trabalho e referências utilizadas na pesquisa.</p>
+                    </div>
+                    <span class="etapa-prazo">Última impressão</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Slide a slide -->
+        <section class="informacoes" id="slide-a-slide">
+            <div class="informacoes-container">
+                <div class="secao-cabecalho centralizado">
+                    <span class="eyebrow">SLIDE A SLIDE</span>
+                    <h2 class="secao-titulo">O que colocar em cada slide</h2>
+                    <p class="secao-subtitulo">
+                        Siga a ordem do modelo padrão do SENAI. Cada card mostra o que
+                        escrever, para que serve o slide e como usá-lo na hora de falar.
+                    </p>
+                </div>
+
+                <div class="informacoes-grid">
+
+                    <!-- Slide 1: Capa -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">01</span>
+                            <h2>Capa</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>Nome do projeto, em destaque.</li>
+                            <li>Nome de todos os integrantes da equipe.</li>
+                            <li>Nome do professor orientador.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            É a primeira impressão da banca. Antes de qualquer explicação,
+                            ela já sabe o nome do projeto e quem está apresentando.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> cumprimente a banca, diga o nome
+                            do projeto e apresente rapidamente a equipe — já combine antes
+                            quem fala em qual parte, para não travar na hora.
+                        </div>
+                    </article>
+
+                    <!-- Slide 2: Objetivo/Tecnologias/Funcionalidades -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">02</span>
+                            <h2>Objetivo, tecnologias e funcionalidades</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li><strong>Objetivo:</strong> o que o projeto se propõe a fazer, em uma frase objetiva.
+                            </li>
+                            <li><strong>Tecnologias utilizadas:</strong> ferramentas, linguagens ou equipamentos
+                                empregados.</li>
+                            <li><strong>Funcionalidades principais:</strong> as 3 a 5 coisas mais importantes que a
+                                solução faz.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            Dá o contexto geral do projeto logo no início, mostrando "o que
+                            é" a solução antes de explicar o problema que ela resolve.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> resuma em poucas frases, sem
+                            entrar em detalhes técnicos profundos — isso fica para o slide
+                            de Viabilidade Técnica, mais à frente.
+                        </div>
+                    </article>
+
+                    <!-- Slide 3: Problema -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">03</span>
+                            <h2>Problema</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>A dor ou necessidade real que motivou o projeto.</li>
+                            <li>Dados, números ou um relato curto que comprovem que o problema existe.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            É o gancho que prende a atenção da banca: justifica por que o
+                            projeto precisa existir antes de mostrar a solução.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> conte como uma pequena história —
+                            quem sofre com esse problema e por quê. Histórias prendem mais
+                            atenção do que listas de dados soltos.
+                        </div>
+                    </article>
+
+                    <!-- Slide 4: Solução -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">04</span>
+                            <h2>Solução</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>A proposta da equipe para resolver o problema apresentado, de forma direta.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            Conecta o problema (slide anterior) com o que será demonstrado
+                            depois: é a resposta da equipe para a dor identificada.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> explique <em>como</em> a solução
+                            resolve o problema, mas ainda sem entrar nos detalhes técnicos
+                            — o objetivo aqui é o "o quê", não o "como por dentro".
+                        </div>
+                    </article>
+
+                    <!-- Slide 5: Resultados -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">05</span>
+                            <h2>Resultados</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>Resultados já obtidos com testes, protótipos ou validações da solução.</li>
+                            <li>Se ainda não há resultados finais, mostre resultados parciais ou esperados.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            Mostra que a equipe já começou a validar que a solução funciona
+                            — não é só uma ideia no papel.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> use números sempre que possível
+                            ("testamos com X pessoas e Y% aprovou"). Dados concretos
+                            aumentam a credibilidade na frente da banca.
+                        </div>
+                    </article>
+
+                    <!-- Slide 6: Protótipo -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">06</span>
+                            <h2>O protótipo</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>Imagens, prints de tela ou um vídeo curto do protótipo funcionando.</li>
+                            <li>Destaque das telas ou partes mais importantes da solução.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            É a prova visual do projeto — a banca precisa <em>ver</em> a
+                            solução, não só ouvir a equipe descrevê-la.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> narre o protótipo como uma
+                            demonstração guiada: "aqui o usuário faz isso, então o sistema
+                            responde assim". Evite deixar o slide em silêncio.
+                        </div>
+                    </article>
+
+                    <!-- Slide 7: Viabilidade Técnica -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">07</span>
+                            <h2>Viabilidade técnica</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>Como a solução funciona por dentro: arquitetura, equipamentos e tecnologia.</li>
+                            <li>Recursos necessários para colocar a solução em prática.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            Comprova que o projeto é tecnicamente possível de ser
+                            implementado, não apenas uma ideia teórica.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> seja direto e evite jargões
+                            desnecessários — nem todos na banca são especialistas na sua
+                            área técnica específica.
+                        </div>
+                    </article>
+
+                    <!-- Slide 8: Potencial Mercado -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">08</span>
+                            <h2>Potencial de mercado</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>Público-alvo e tamanho do mercado.</li>
+                            <li>Principais concorrentes e o diferencial da sua solução.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            Mostra que o projeto tem relevância fora da sala de aula —
+                            quem usaria ou pagaria por essa solução no mundo real.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> relacione com exemplos reais do
+                            mercado e destaque, em uma frase, o que torna sua solução
+                            diferente do que já existe.
+                        </div>
+                    </article>
+
+                    <!-- Slide 9: Viabilidade Econômica -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">09</span>
+                            <h2>Viabilidade econômica</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>Custo total estimado do projeto.</li>
+                            <li>Se possível, um breve detalhamento dos principais custos.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            Mostra que a equipe também pensou no lado financeiro do
+                            projeto, não só no técnico.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> nunca deixe o número sozinho —
+                            justifique rapidamente o que ele cobre ("esse valor inclui
+                            componentes, hospedagem e licenças, por exemplo").
+                        </div>
+                    </article>
+
+                    <!-- Slide 10: Resultado e Conclusão -->
+                    <article class="modal-visivel">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">10</span>
+                            <h2>Resultado e conclusão</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>Retomada dos objetivos propostos no início: eles foram alcançados?</li>
+                            <li>Principais aprendizados da equipe ao longo do projeto.</li>
+                            <li>Próximos passos, se houver planos de continuar o projeto.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            Fecha o raciocínio da apresentação, amarrando tudo o que foi
+                            mostrado com o objetivo inicial do projeto.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> recapitule em poucas frases e
+                            termine com uma frase de impacto — é a última coisa que a banca
+                            vai lembrar antes de fazer perguntas.
+                        </div>
+                    </article>
+
+                    <!-- Slide 11: Referências -->
+                    <article class="modal-visivel modal-destaque">
+                        <div class="modal-topo">
+                            <span class="icone-etapa">11</span>
+                            <h2>Referências</h2>
+                        </div>
+
+                        <h3>O que colocar</h3>
+                        <ul>
+                            <li>As principais fontes usadas na pesquisa do projeto.</li>
+                            <li>Seguindo o mesmo padrão ABNT usado no trabalho escrito.</li>
+                        </ul>
+
+                        <h3>Função na apresentação</h3>
+                        <p>
+                            Dá credibilidade acadêmica ao trabalho, mostrando que houve
+                            pesquisa séria por trás da solução apresentada.
+                        </p>
+
+                        <div class="caixa-info">
+                            <strong>Dica de fala:</strong> normalmente esse slide não é
+                            detalhado em voz alta. Basta mencionar rapidamente que as
+                            referências completas estão disponíveis e seguir para as
+                            perguntas da banca.
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Desempenho -->
+        <section class="sobre" id="desempenho">
+            <div class="secao-cabecalho">
+                <span class="eyebrow">NA HORA DA APRESENTAÇÃO</span>
+                <h2 class="secao-titulo">Como ter um ótimo desempenho</h2>
+                <p class="secao-subtitulo">
+                    O slide organiza o conteúdo, mas quem convence a banca é a
+                    apresentação da equipe. Algumas dicas práticas:
+                </p>
+            </div>
+
+            <div class="informacoes-grid" style="max-width: 1100px; margin: 0 auto;">
+
+                <article class="modal-visivel">
+                    <div class="modal-topo">
+                        <span class="icone-etapa">★</span>
+                        <h2>Antes da apresentação</h2>
+                    </div>
+                    <ul>
+                        <li>Ensaie a fala completa pelo menos duas vezes, com todos os integrantes.</li>
+                        <li>Defina quem fala em cada slide e treine as transições entre um integrante e outro.</li>
+                        <li>Cronometre o ensaio: o tempo máximo de defesa é de até 20 minutos.</li>
+                        <li>Teste o protótipo antes, para garantir que ele funciona no dia.</li>
+                    </ul>
+                </article>
+
+                <article class="modal-visivel">
+                    <div class="modal-topo">
+                        <span class="icone-etapa">★</span>
+                        <h2>Durante a apresentação</h2>
+                    </div>
+                    <ul>
+                        <li>Fale olhando para a banca, não para o slide — o slide é apoio, não o roteiro.</li>
+                        <li>Evite ler o slide palavra por palavra; explique com suas próprias palavras.</li>
+                        <li>Fale em ritmo calmo e com volume de voz adequado para toda a sala.</li>
+                        <li>Todos os integrantes da equipe devem estar presentes e participar da fala.</li>
+                        <li>É liberado o uso de traje esporte fino para quem for apresentar.</li>
+                    </ul>
+                </article>
+
+                <article class="modal-visivel">
+                    <div class="modal-topo">
+                        <span class="icone-etapa">★</span>
+                        <h2>Na hora das perguntas</h2>
+                    </div>
+                    <ul>
+                        <li>Ouça a pergunta inteira antes de responder — não interrompa a banca.</li>
+                        <li>Se não souber a resposta, seja honesto e ofereça o que sabe sobre o tema.</li>
+                        <li>Deixe o integrante mais à vontade com o assunto responder cada pergunta.</li>
+                        <li>Considere as observações da banca como parte da avaliação, não como crítica pessoal.</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Ações de navegação -->
+        <section class="proxima-etapa">
+            <div class="proxima-container">
+                <div>
+                    <span class="eyebrow">CONTINUE SUA JORNADA</span>
+                    <h2>Precisa de um modelo de exemplo?</h2>
+                    <p>
+                        Clique no botão ao lado para acessar o arquivo de apresentação do modelo padrão do SENAI.
+                    </p>
+                </div>
+
+                <div class="hero-acoes">
+                    <a href="documents/4ca36b77-8ae9-46c2-930f-cf16719ffc34.pptx.pdf" class="botao botao-outline">Ver Modelo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-container">
+
+            <!-- Coluna 1 — Marca -->
+            <div class="rodape-col rodape-marca">
+                <img src="css/imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="rodape-logo" />
+                <p class="rodape-descricao">
+                    Plataforma de apoio à criação de Projetos Integradores, do primeiro
+                    rascunho à banca final.
+                </p>
+            </div>
+
+            <!-- Coluna 2 — Links rápidos -->
+            <nav class="rodape-col rodape-links" aria-label="Links rápidos">
+                <h4 class="rodape-titulo">Links rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="explicacao.html">Como fazer seu Projeto</a></li>
+                    <li><a href="repositorio.html">Repositório de Núcleos</a></li>
+                    <li><a href="normas-abnt.html">Normas ABNT</a></li>
+                    <li><a href="slide.html">Slides da Apresentação</a></li>
+                </ul>
+            </nav>
+
+                <!-- Coluna 3 — Contato / institucional -->
+                <div class="rodape-col rodape-contato">
+                    <h4 class="rodape-titulo">SENAI Paraíba</h4>
+                    <ul>
+                        <li><a href="https://fiepb.com.br/senai" target="_blank" rel="noopener noreferrer">fiepb.com.br</a></li>
+                        <li><a href="mailto:faleconosco@fiepb.org.br" target="_blank"
+                                rel="noopener noreferrer">faleconosco@fiepb.org.br</a></li>
+                        <li><a href="https://maps.app.goo.gl/RoBbPE47nx1iVvTeA" target="_blank" rel="noopener noreferrer">R. Dom Pedro
+                                II, 788 - Prata, Campina Grande - PB, 58400-565</a></li>
+                    </ul>
+                </div>
+
+<!-- Coluna 4 — Redes sociais -->
+<div class="rodape-col rodape-social">
+    <h4 class="rodape-titulo">Siga o SENAI</h4>
+    <ul class="rodape-social-lista">
+        <!-- TODO: troque "#" pelos links oficiais do SENAI-PB -->
+        <li>
+            <a href="https://www.instagram.com/senaiparaiba/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram do SENAI Paraíba">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+                    <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6" />
+                    <circle cx="17.1" cy="6.9" r="1.1" fill="currentColor" />
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/senaiparaiba/?locale=pt_BR" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook do SENAI Paraíba">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                        d="M14 8.5h2.5V5.2h-2.7c-2.4 0-3.8 1.5-3.8 3.9v2H7.8v3.3h2.2V21h3.4v-6.6h2.4l.5-3.3h-2.9V9.3c0-.6.3-.8.9-.8Z"
+                        fill="currentColor" />
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/senaiparaiba" target="_blank" rel="noopener noreferrer"
+                aria-label="YouTube do SENAI Paraíba">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="2.7" y="6" width="18.6" height="12" rx="4" stroke="currentColor" stroke-width="1.6" />
+                    <path d="M10.3 9.6v4.8l4.4-2.4-4.4-2.4Z" fill="currentColor" />
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://br.linkedin.com/company/senai-paraiba" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn do SENAI Paraíba">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6" />
+                    <path d="M7.5 10.3v6.2M7.5 7.7v.02M11.3 16.5v-3.6c0-1.4.9-2.3 2.1-2.3 1.2 0 1.9.8 1.9 2.3v3.6"
+                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div>
+
+</div>
+
+        <!-- Barra inferior -->
+        <div class="rodape-inferior">
+            <p class="rodape-texto">
+                &copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de Projetos Integradores.
+            </p>
+            <ul class="rodape-legais">
+                <li><a href="https://fiepb.com.br/politica-de-privacidade">Política de Privacidade</a></li>
+                <li><a href="https://fiepb.com.br/termos-de-uso">Termos de Uso</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/script2.js"></script>
+</body>
+
+</html>
