@@ -5,25 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Página Inicial</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Garante que o Widget do VLibras fique visível sobre os outros elementos */
+    [vw] {
+      position: fixed;
+      z-index: 999999;
+    }
+  </style>
 </head>
 <body class="pagina-inicial">
 
   <!-- ===================== CABEÇALHO UNIFICADO ===================== -->
-<header class="header">
-  <div class="header-container">
-    <a href="index.html" class="marca-senai" aria-label="Página inicial">
-      <img src="css/imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="logo" />
-    </a>
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="marca-senai" aria-label="Página inicial">
+        <img src="css/imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="logo" />
+      </a>
 
-    <nav aria-label="Navegação principal">
-      <ul class="nav-lista">
-        <li><a href="index.html" class="nav-link ativo">Início</a></li>
-        <li><a href="explicacao.html" class="nav-link">Como fazer seu Projeto</a></li>
-        <li><a href="repositorio.html" class="nav-link">Repositório de Núcleos</a></li>
-        <li><a href="normasabnt.html" class="nav-link">Documentação</a></li>
-        <li><a href="slide.html" class="nav-link">Slides e Apresentação</a></li>
-      </ul>
-    </nav>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-lista">
+          <li><a href="index.html" class="nav-link ativo">Início</a></li>
+          <li><a href="explicacao.html" class="nav-link">Como fazer seu Projeto</a></li>
+          <li><a href="repositorio.html" class="nav-link">Repositório de Núcleos</a></li>
+          <li><a href="normasabnt.html" class="nav-link">Documentação</a></li>
+          <li><a href="slide.html" class="nav-link">Slides e Apresentação</a></li>
+        </ul>
+      </nav>
 
       <div class="acoes-header">
         <button class="botao-acessibilidade" aria-label="Abrir acessibilidade">
@@ -36,82 +43,71 @@
         <div class="acessibilidade-overlay" id="acessibilidadeOverlay"></div>
         <aside class="painel-acessibilidade" id="painelAcessibilidade">
           <button class="fechar-acessibilidade" id="fecharAcessibilidade" aria-label="Fechar painel" type="button"> × </button>
-            <div class="painel-acessibilidade-conteudo">
-              <!-- AUMENTAR LETRAS -->
-              <button class="opcao-acessibilidade" id="aumentarFonte" type="button" aria-label="Aumentar tamanho do texto">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 19 8 5l4 14M5.5 14h5" fill="none" stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M15 8h6M18 5v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                </svg>
-                <span>Aumentar Texto</span>
-              </button>
-              <!-- DIMINUIR LETRAS -->
-              <button class="opcao-acessibilidade" id="diminuirFonte" type="button" aria-label="Diminuir tamanho do texto">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 19 8 5l4 14M5.5 14h5" fill="none" stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M15 8h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                </svg>
-                <span>Diminuir Texto</span>
-              </button>
-              <!-- MODO ESCURO -->
-              <button class="opcao-acessibilidade" id="temaToggle" type="button" aria-label="Ativar modo escuro">
-                <svg id="iconeTema" viewBox="0 0 24 24" aria-hidden="true"></svg>
-                <span>Modo Escuro</span>
-              </button>
-              <!-- ALTO FALANTE -->
-              <button class="opcao-acessibilidade" id="leitorTela" type="button" aria-label="Ler conteúdo da página">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 10v4h4l5 4V6L8 10H4Z" fill="none" stroke="currentColor" stroke-width="1.8"
-                    stroke-linejoin="round" />
-                  <path d="M16 9c1 .8 1.5 1.8 1.5 3S17 14.2 16 15" fill="none" stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" />
-                  <path d="M18.5 6.5c2 1.5 3 3.3 3 5.5s-1 4-3 5.5" fill="none" stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" />
-                </svg>
-                <span>Leitor de Texto</span>
-              </button>
-            </div>
+          <div class="painel-acessibilidade-conteudo">
+            <!-- AUMENTAR LETRAS -->
+            <button class="opcao-acessibilidade" id="aumentarFonte" type="button" aria-label="Aumentar tamanho do texto">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 19 8 5l4 14M5.5 14h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15 8h6M18 5v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <span>Aumentar Texto</span>
+            </button>
+
+            <!-- DIMINUIR LETRAS -->
+            <button class="opcao-acessibilidade" id="diminuirFonte" type="button" aria-label="Diminuir tamanho do texto">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 19 8 5l4 14M5.5 14h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15 8h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <span>Diminuir Texto</span>
+            </button>
+
+            <!-- MODO ESCURO -->
+            <button class="opcao-acessibilidade" id="temaToggle" type="button" aria-label="Ativar modo escuro">
+              <svg id="iconeTema" viewBox="0 0 24 24" aria-hidden="true"></svg>
+              <span>Modo Escuro</span>
+            </button>
+
+            <!-- ALTO FALANTE -->
+            <button class="opcao-acessibilidade" id="leitorTela" type="button" aria-label="Ler conteúdo da página">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 10v4h4l5 4V6L8 10H4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                <path d="M16 9c1 .8 1.5 1.8 1.5 3S17 14.2 16 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M18.5 6.5c2 1.5 3 3.3 3 5.5s-1 4-3 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+              <span>Leitor de Texto</span>
+            </button>
+          </div>
+        </aside>
       </div>
-      </aside>
+    </div>
+  </header>
 
-
-  </div>
-</header>
-
-
-  
   <!-- ===================== SEÇÃO COMO USAR A PLATAFORMA (CARROSSEL) ===================== -->
   <section class="como-usar" id="como-usar">
     <div class="como-usar-container">
       <div class="secao-cabecalho centralizado">
-        <span class="eyebrow">COMEÇE POR AQUI</span>
+        <span class="eyebrow">COMECE POR AQUI</span>
         <h2 class="secao-titulo">Como usar esta plataforma</h2>
         <p class="secao-subtitulo-i">
-          Quatro paradas para o seu Projeto Integrador sair do zero até a banca final. <strong>clique em qualquer uma delas</strong> para acessar os conteúdos e materiais de apoio.
+          Quatro paradas para o seu Projeto Integrador sair do zero até a banca final. <strong>Clique em qualquer uma delas</strong> para acessar os conteúdos e materiais de apoio.
         </p>
       </div>
   
       <div class="carrossel" id="carrosselUso" aria-roledescription="carrossel">
-        <button class="carrossel-seta carrossel-anterior" id="carrosselAnterior" type="button"
-          aria-label="Passo anterior">
+        <button class="carrossel-seta carrossel-anterior" id="carrosselAnterior" type="button" aria-label="Passo anterior">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
+            <path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
   
         <div class="carrossel-janela">
           <ul class="carrossel-trilha" id="carrosselTrilha">
-  
             <li class="carrossel-slide">
               <a class="carrossel-slide-link" aria-label="Entenda as etapas do projeto">
                 <div class="carrossel-imagem-wrapper">
-                  <div class="carrossel-imagem-fallback">
-                  </div>
-                  <img src="css/imgs/apresentacao.png" alt="Etapas do Projeto Integrador"
-                    class="carrossel-imagem" onerror="this.style.display='none'">
+                  <div class="carrossel-imagem-fallback"></div>
+                  <img src="css/imgs/apresentacao.png" alt="Seja Bem vindo ao site!" class="carrossel-imagem" onerror="this.style.display='none'">
                 </div>
                 <div class="carrossel-legenda">
                   <span class="carrossel-numero">00</span>
@@ -125,15 +121,12 @@
                 <div class="carrossel-imagem-wrapper">
                   <div class="carrossel-imagem-fallback">
                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M9 11l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" stroke="currentColor"
-                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M9 11l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     <span>Imagem em breve</span>
                   </div>
-                  <img src="css/imgs/slide1.png" alt="Etapas do Projeto Integrador"
-                    class="carrossel-imagem" onerror="this.style.display='none'">
+                  <img src="css/imgs/slide1.png" alt="Etapas do Projeto Integrador" class="carrossel-imagem" onerror="this.style.display='none'">
                 </div>
                 <div class="carrossel-legenda">
                   <span class="carrossel-numero">01</span>
@@ -148,13 +141,11 @@
                   <div class="carrossel-imagem-fallback">
                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <rect x="5" y="3" width="14" height="18" rx="1.6" stroke="currentColor" stroke-width="1.6" />
-                      <path d="M8.5 8h7M8.5 12h7M8.5 16h4" stroke="currentColor" stroke-width="1.6"
-                        stroke-linecap="round" />
+                      <path d="M8.5 8h7M8.5 12h7M8.5 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
                     </svg>
                     <span>Imagem em breve</span>
                   </div>
-                  <img src="css/imgs/slide2.png" alt="Documentação para o trabalho escrito"
-                    class="carrossel-imagem" onerror="this.style.display='none'">
+                  <img src="css/imgs/slide2.png" alt="Documentação para o trabalho escrito" class="carrossel-imagem" onerror="this.style.display='none'">
                 </div>
                 <div class="carrossel-legenda">
                   <span class="carrossel-numero">02</span>
@@ -173,8 +164,7 @@
                     </svg>
                     <span>Imagem em breve</span>
                   </div>
-                  <img src="css/imgs/slide3.png" alt="Preparação dos slides e do pitch"
-                    class="carrossel-imagem" onerror="this.style.display='none'">
+                  <img src="css/imgs/slide3.png" alt="Preparação dos slides e do pitch" class="carrossel-imagem" onerror="this.style.display='none'">
                 </div>
                 <div class="carrossel-legenda">
                   <span class="carrossel-numero">03</span>
@@ -188,15 +178,12 @@
                 <div class="carrossel-imagem-wrapper">
                   <div class="carrossel-imagem-fallback">
                     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="1.6"
-                        stroke-linecap="round" />
-                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" stroke="currentColor"
-                        stroke-width="1.6" stroke-linejoin="round" />
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
                     </svg>
                     <span>Imagem em breve</span>
                   </div>
-                  <img src="css/imgs/slide4.png" alt="Repositório de trabalhos por núcleo"
-                    class="carrossel-imagem" onerror="this.style.display='none'">
+                  <img src="css/imgs/slide4.png" alt="Repositório de trabalhos por núcleo" class="carrossel-imagem" onerror="this.style.display='none'">
                 </div>
                 <div class="carrossel-legenda">
                   <span class="carrossel-numero">04</span>
@@ -204,14 +191,12 @@
                 </div>
               </a>
             </li>
-  
           </ul>
         </div>
   
         <button class="carrossel-seta carrossel-proximo" id="carrosselProximo" type="button" aria-label="Próximo passo">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
+            <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
       </div>
@@ -219,133 +204,129 @@
       <div class="carrossel-pontos" id="carrosselPontos" role="tablist" aria-label="Selecionar passo"></div>
     </div>
   </section>
-<!-- ===================== SEÇÃO HERO ===================== -->
-<section class="hero-init">
-  <div class="hero-container">
-    <h1 class="hero-titulo">Seu Projeto Integrador, do primeiro rascunho à banca final</h1>
-    <p class="hero-descricao">
-      Este espaço reúne tudo o que você precisa para desenvolver seu Trabalho de Conclusão de Curso no SENAI:
-      modelos, orientações por etapa e o acervo de trabalhos organizado por núcleo.
-    </p>
-    <div class="hero-acoes">
-      <a href="explicacao.html" class="botao botao-primario">Como fazer meu Projeto integrador</a>
-      <a href="#nucleos" class="botao botao-secundario">Ver acervo por curso</a>
-    </div>
-  </div>
-</section>
 
-<!-- ===================== ETAPAS DO PROJETO ===================== -->
-
-<section class="etapas">
-  <div class="etapas-container">
-    <!-- CARD 01 -->
-    <div class="etapa-card">
-      <div class="numero-etapa">01</div>
-      <div class="etapa-icone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M12 3 3 8l9 5 9-5-9-5Z" />
-          <path d="m3 12 9 5 9-5" />
-          <path d="m3 16 9 5 9-5" />
-        </svg>
+  <!-- ===================== SEÇÃO HERO ===================== -->
+  <section class="hero-init">
+    <div class="hero-container">
+      <h1 class="hero-titulo">Seu Projeto Integrador, do primeiro rascunho à banca final</h1>
+      <p class="hero-descricao">
+        Este espaço reúne tudo o que você precisa para desenvolver seu Trabalho de Conclusão de Curso no SENAI:
+        modelos, orientações por etapa e o acervo de trabalhos organizado por núcleo.
+      </p>
+      <div class="hero-acoes">
+        <a href="explicacao.html" class="botao botao-primario">Como fazer meu Projeto integrador</a>
+        <a href="#nucleos" class="botao botao-secundario">Ver acervo por curso</a>
       </div>
-      <div class="etapa-conteudo">
-        <h3>Trabalho escrito</h3>
-        <p>
-          Documento em PDF, seguindo a estrutura indicada
-          e as normas da ABNT.
-        </p>
-        <span class="etapa-tempo">
+    </div>
+  </section>
+
+  <!-- ===================== ETAPAS DO PROJETO ===================== -->
+  <section class="etapas">
+    <div class="etapas-container">
+      <!-- CARD 01 -->
+      <div class="etapa-card">
+        <div class="numero-etapa">01</div>
+        <div class="etapa-icone">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <circle cx="12" cy="12" r="8" />
-            <path d="M12 8v4l3 2" />
+            <path d="M12 3 3 8l9 5 9-5-9-5Z" />
+            <path d="m3 12 9 5 9-5" />
+            <path d="m3 16 9 5 9-5" />
           </svg>
-          10 a 15 páginas
-        </span>
+        </div>
+        <div class="etapa-conteudo">
+          <h3>Trabalho escrito</h3>
+          <p>
+            Documento em PDF, seguindo a estrutura indicada e as normas da ABNT.
+          </p>
+          <span class="etapa-tempo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 8v4l3 2" />
+            </svg>
+            10 a 15 páginas
+          </span>
+        </div>
       </div>
-    </div>
-    <!-- CARD 02 -->
-    <div class="etapa-card">
-      <div class="numero-etapa">02</div>
-      <div class="etapa-icone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <rect x="4" y="3" width="16" height="18" rx="3" />
-          <path d="m10 8 5 4-5 4V8Z" />
-        </svg>
-      </div>
-      <div class="etapa-conteudo">
-        <h3>Vídeo do Pitch</h3>
-        <p>
-          Apresentação rápida, clara e persuasiva da ideia,
-          solução e protótipo.
-        </p>
-        <span class="etapa-tempo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <circle cx="12" cy="12" r="8" />
-            <path d="M12 8v4l3 2" />
-          </svg>
-          2 a 3 minutos
-        </span>
-      </div>
-    </div>
-    <!-- CARD 03 -->
-    <div class="etapa-card">
-      <div class="numero-etapa">03</div>
-      <div class="etapa-icone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-          <circle cx="9" cy="7" r="4" />
-          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-        </svg>
-      </div>
-      <div class="etapa-conteudo">
-        <h3>Banca de apresentação</h3>
-        <p>
-          Defesa presencial do projeto diante da banca
-          avaliadora.
-        </p>
-        <span class="etapa-tempo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <circle cx="12" cy="12" r="8" />
-            <path d="M12 8v4l3 2" />
-          </svg>
-          Até 20 minutos
-        </span>
-      </div>
-    </div>
-    <!-- CARD 04 -->
-    <div class="etapa-card">
-      <div class="numero-etapa">04</div>
-      <div class="etapa-icone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <circle cx="12" cy="12" r="9" />
-          <path d="m8 12 2.5 2.5L16 9" />
-        </svg>
-      </div>
-      <div class="etapa-conteudo">
-        <h3>Correções pós-banca</h3>
-        <p>
-          Realização dos ajustes solicitados durante a
-          avaliação do projeto.
-        </p>
-        <span class="etapa-tempo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <circle cx="12" cy="12" r="8" />
-            <path d="M12 8v4l3 2" />
-          </svg>
-          Após a avaliação
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Secão começar -->
+      <!-- CARD 02 -->
+      <div class="etapa-card">
+        <div class="numero-etapa">02</div>
+        <div class="etapa-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <rect x="4" y="3" width="16" height="18" rx="3" />
+            <path d="m10 8 5 4-5 4V8Z" />
+          </svg>
+        </div>
+        <div class="etapa-conteudo">
+          <h3>Vídeo do Pitch</h3>
+          <p>
+            Apresentação rápida, clara e persuasiva da ideia, solução e protótipo.
+          </p>
+          <span class="etapa-tempo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 8v4l3 2" />
+            </svg>
+            2 a 3 minutos
+          </span>
+        </div>
+      </div>
 
+      <!-- CARD 03 -->
+      <div class="etapa-card">
+        <div class="numero-etapa">03</div>
+        <div class="etapa-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </div>
+        <div class="etapa-conteudo">
+          <h3>Banca de apresentação</h3>
+          <p>
+            Defesa presencial do projeto diante da banca avaliadora.
+          </p>
+          <span class="etapa-tempo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 8v4l3 2" />
+            </svg>
+            Até 20 minutos
+          </span>
+        </div>
+      </div>
 
-<!-- ===================== SEÇÃO REPOSITÓRIO ===================== -->
-<section class="nucleos" id="nucleos">
-  <div class="nucleos-container">
+      <!-- CARD 04 -->
+      <div class="etapa-card">
+        <div class="numero-etapa">04</div>
+        <div class="etapa-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="9" />
+            <path d="m8 12 2.5 2.5L16 9" />
+          </svg>
+        </div>
+        <div class="etapa-conteudo">
+          <h3>Correções pós-banca</h3>
+          <p>
+            Realização dos ajustes solicitados durante a avaliação do projeto.
+          </p>
+          <span class="etapa-tempo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 8v4l3 2" />
+            </svg>
+            Após a avaliação
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEÇÃO REPOSITÓRIO ===================== -->
+  <section class="nucleos" id="nucleos">
+    <div class="nucleos-container">
       <div class="repositorio-decoracao">
         <span></span>
         <div class="icone-chapeu">
@@ -357,9 +338,7 @@
         </div>
         <span></span>
       </div>
-      <h2 class="secao-titulo">
-        Repositório de núcleos
-      </h2>
+      <h2 class="secao-titulo">Repositório de núcleos</h2>
       <div class="linha-titulo">
         <span></span>
       </div>
@@ -376,128 +355,128 @@
     </div>
   </section>
   
-  <section class="nucleos" id="nucleos">
-      <div class="nucleos-container">
-        <div class="repositorio-decoracao">
-          <div class="icone-chapeu">
-            <h1>✓</h1>
-          </div>
+  <section class="nucleos">
+    <div class="nucleos-container">
+      <div class="repositorio-decoracao">
+        <div class="icone-chapeu">
+          <h1>✓</h1>
         </div>
-        <h2 class="secao-titulo">
-          Não sabe por onde começar?
-        </h2>
-        <div class="linha-titulo">
-          <span></span>
-        </div>
-        <p class="secao-subtitulo">
-          Acesse as <strong>etapas do projeto</strong> e descubra como organizar seu trabalho, desde o primeiro rascunho até a apresentação final.
-        </p>
-        <a href="explicacao.html" class="botao botao-repositorio">
-          Acessar etapas do projeto
-        </a>
       </div>
-    </section>  
-  <!-- ===================== RODAPÉ UNIFICADO ===================== -->
-  <!-- ===================== FOOTER ===================== -->
-<footer class="rodape">
-        <div class="rodape-container">
+      <h2 class="secao-titulo">Não sabe por onde começar?</h2>
+      <div class="linha-titulo">
+        <span></span>
+      </div>
+      <p class="secao-subtitulo">
+        Acesse as <strong>etapas do projeto</strong> e descubra como organizar seu trabalho, desde o primeiro rascunho até a apresentação final.
+      </p>
+      <a href="explicacao.html" class="botao botao-repositorio">
+        Acessar etapas do projeto
+      </a>
+    </div>
+  </section>   
 
-            <!-- Coluna 1 — Marca -->
-            <div class="rodape-col rodape-marca">
-                <img src="css/imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="rodape-logo" />
-                <p class="rodape-descricao">
-                    Plataforma de apoio à criação de Projetos Integradores, do primeiro
-                    rascunho à banca final.
-                </p>
-            </div>
+  <!-- ===================== FOOTER / RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="rodape-container">
+      <!-- Coluna 1 — Marca -->
+      <div class="rodape-col rodape-marca">
+        <img src="css/imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="rodape-logo" />
+        <p class="rodape-descricao">
+          Plataforma de apoio à criação de Projetos Integradores, do primeiro rascunho à banca final.
+        </p>
+      </div>
 
-            <nav class="rodape-col rodape-links" aria-label="Links rápidos">
-                <h4 class="rodape-titulo">Links rápidos</h4>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="explicacao.html">Como fazer seu Projeto</a></li>
-                    <li><a href="repositorio.html">Repositório de Núcleos</a></li>
-                    <li><a href="normasabnt.html">Documentação</a></li>
-                    <li><a href="slide.html">Slides e Apresentação</a></li>
-                </ul>
-            </nav>
+      <!-- Coluna 2 — Links Rápidos -->
+      <nav class="rodape-col rodape-links" aria-label="Links rápidos">
+        <h4 class="rodape-titulo">Links rápidos</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="explicacao.html">Como fazer seu Projeto</a></li>
+          <li><a href="repositorio.html">Repositório de Núcleos</a></li>
+          <li><a href="normasabnt.html">Documentação</a></li>
+          <li><a href="slide.html">Slides e Apresentação</a></li>
+        </ul>
+      </nav>
 
-                <!-- Coluna 3 — Contato / institucional -->
-                <div class="rodape-col rodape-contato">
-                    <h4 class="rodape-titulo">SENAI Paraíba</h4>
-                    <ul>
-                        <li><a href="https://fiepb.com.br/senai" target="_blank" rel="noopener noreferrer">fiepb.com.br</a></li>
-                        <li><a href="mailto:faleconosco@fiepb.org.br" target="_blank"
-                                rel="noopener noreferrer">faleconosco@fiepb.org.br</a></li>
-                        <li><a href="https://maps.app.goo.gl/RoBbPE47nx1iVvTeA" target="_blank" rel="noopener noreferrer">R. Dom Pedro
-                                II, 788 - Prata, Campina Grande - PB, 58400-565</a></li>
-                    </ul>
-                </div>
+      <!-- Coluna 3 — Contato / institucional -->
+      <div class="rodape-col rodape-contato">
+        <h4 class="rodape-titulo">SENAI Paraíba</h4>
+        <ul>
+          <li><a href="https://fiepb.com.br/senai" target="_blank" rel="noopener noreferrer">fiepb.com.br</a></li>
+          <li><a href="mailto:faleconosco@fiepb.org.br" target="_blank" rel="noopener noreferrer">faleconosco@fiepb.org.br</a></li>
+          <li><a href="https://maps.app.goo.gl/RoBbPE47nx1iVvTeA" target="_blank" rel="noopener noreferrer">R. Dom Pedro II, 788 - Prata, Campina Grande - PB, 58400-565</a></li>
+        </ul>
+      </div>
 
-<!-- Coluna 4 — Redes sociais -->
-<div class="rodape-col rodape-social">
-    <h4 class="rodape-titulo">Siga o SENAI</h4>
-    <ul class="rodape-social-lista">
-        <!-- TODO: troque "#" pelos links oficiais do SENAI-PB -->
-        <li>
-            <a href="https://www.instagram.com/senaiparaiba/" target="_blank" rel="noopener noreferrer"
-                aria-label="Instagram do SENAI Paraíba">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
-                    <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6" />
-                    <circle cx="17.1" cy="6.9" r="1.1" fill="currentColor" />
-                </svg>
+      <!-- Coluna 4 — Redes sociais -->
+      <div class="rodape-col rodape-social">
+        <h4 class="rodape-titulo">Siga o SENAI</h4>
+        <ul class="rodape-social-lista">
+          <li>
+            <a href="https://www.instagram.com/senaiparaiba/" target="_blank" rel="noopener noreferrer" aria-label="Instagram do SENAI Paraíba">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+                <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6" />
+                <circle cx="17.1" cy="6.9" r="1.1" fill="currentColor" />
+              </svg>
             </a>
-        </li>
-        <li>
-            <a href="https://www.facebook.com/senaiparaiba/?locale=pt_BR" target="_blank" rel="noopener noreferrer"
-                aria-label="Facebook do SENAI Paraíba">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path
-                        d="M14 8.5h2.5V5.2h-2.7c-2.4 0-3.8 1.5-3.8 3.9v2H7.8v3.3h2.2V21h3.4v-6.6h2.4l.5-3.3h-2.9V9.3c0-.6.3-.8.9-.8Z"
-                        fill="currentColor" />
-                </svg>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/senaiparaiba/?locale=pt_BR" target="_blank" rel="noopener noreferrer" aria-label="Facebook do SENAI Paraíba">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M14 8.5h2.5V5.2h-2.7c-2.4 0-3.8 1.5-3.8 3.9v2H7.8v3.3h2.2V21h3.4v-6.6h2.4l.5-3.3h-2.9V9.3c0-.6.3-.8.9-.8Z" fill="currentColor" />
+              </svg>
             </a>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/senaiparaiba" target="_blank" rel="noopener noreferrer"
-                aria-label="YouTube do SENAI Paraíba">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <rect x="2.7" y="6" width="18.6" height="12" rx="4" stroke="currentColor" stroke-width="1.6" />
-                    <path d="M10.3 9.6v4.8l4.4-2.4-4.4-2.4Z" fill="currentColor" />
-                </svg>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/senaiparaiba" target="_blank" rel="noopener noreferrer" aria-label="YouTube do SENAI Paraíba">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="2.7" y="6" width="18.6" height="12" rx="4" stroke="currentColor" stroke-width="1.6" />
+                <path d="M10.3 9.6v4.8l4.4-2.4-4.4-2.4Z" fill="currentColor" />
+              </svg>
             </a>
-        </li>
-        <li>
-            <a href="https://br.linkedin.com/company/senai-paraiba" target="_blank" rel="noopener noreferrer"
-                aria-label="LinkedIn do SENAI Paraíba">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6" />
-                    <path d="M7.5 10.3v6.2M7.5 7.7v.02M11.3 16.5v-3.6c0-1.4.9-2.3 2.1-2.3 1.2 0 1.9.8 1.9 2.3v3.6"
-                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-                </svg>
+          </li>
+          <li>
+            <a href="https://br.linkedin.com/company/senai-paraiba" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn do SENAI Paraíba">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6" />
+                <path d="M7.5 10.3v6.2M7.5 7.7v.02M11.3 16.5v-3.6c0-1.4.9-2.3 2.1-2.3 1.2 0 1.9.8 1.9 2.3v3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
             </a>
-        </li>
-    </ul>
-</div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-</div>
+    <!-- Barra inferior -->
+    <div class="rodape-inferior">
+      <p class="rodape-texto">
+        &copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de Projetos Integradores.
+      </p>
+      <ul class="rodape-legais">
+        <li><a href="https://fiepb.com.br/politica-de-privacidade">Política de Privacidade</a></li>
+        <li><a href="https://fiepb.com.br/termos-de-uso">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </footer>
 
-        <!-- Barra inferior -->
-        <div class="rodape-inferior">
-            <p class="rodape-texto">
-                &copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de Projetos Integradores.
-            </p>
-            <ul class="rodape-legais">
-                <li><a href="https://fiepb.com.br/politica-de-privacidade">Política de Privacidade</a></li>
-                <li><a href="https://fiepb.com.br/termos-de-uso">Termos de Uso</a></li>
-            </ul>
-        </div>
-</footer>
+  <!-- ===================== ESTRUTURA DO VLIBRAS ===================== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
 
+  <!-- ===================== SCRIPTS DO PROJETO ===================== -->
   <script src="js/script.js"></script>
   <script src="js/script2.js"></script>
+
+  <!-- Script Oficial do VLibras (CDN) -->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
   <script>
+    // Atualiza o ano no rodapé
     document.getElementById('ano-atual').textContent = new Date().getFullYear();
   </script>
 </body>

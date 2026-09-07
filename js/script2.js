@@ -340,34 +340,134 @@ if (diminuirFonte) {
 atualizarFonte();
 
 // ===============================
-// LEITOR DE TEXTO
+// LEITOR SELETIVO (INCLUINDO LISTAS OL E UL)
 // ===============================
 
 const leitorTela = document.getElementById('leitorTela');
-if (leitorTela) {
-    leitorTela.addEventListener(
-        'click',
-        function () {
-            // Verifica se o navegador suporta leitura
-            if (!('speechSynthesis' in window)) {
-                alert(
-                    'Seu navegador não suporta leitura de texto.'
-                );
-                return;
-            }
-            // Se já estiver lendo, para
-            window.speechSynthesis.cancel();
-            // Texto principal da página
-            const texto = document.body.innerText;
-            const fala = new SpeechSynthesisUtterance(
-                texto
-            );
-            // Português brasileiro
-            fala.lang = 'pt-BR';
-            fala.rate = 1;
-            window.speechSynthesis.speak(fala);
-        }
+let ultimoElementoClicado = null;
+
+let modoLeituraAtivo = localStorage.getItem('modoLeitura') === 'ativo';
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (modoLeituraAtivo) {
+        ativarNavegacaoTotal();
+        lerTexto("Leitor de texto ativo.");
+    }
+});
+
+// 1. ADICIONA TABINDEX NOS ELEMENTOS RELEVANTES E LISTAS
+function ativarNavegacaoTotal() {
+    // Adicionado 'ul', 'ol' e 'li' na busca
+    const elementosImportantes = document.querySelectorAll(
+        'h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea, img, ul, ol, li, .etapa-card, .carrossel-slide-link'
     );
+
+    elementosImportantes.forEach(function (el) {
+        if (el.closest('.painel-acessibilidade') || el.closest('[vw]')) {
+            return;
+        }
+
+        const temTexto = el.innerText && el.innerText.trim().length > 0;
+        const temAtributoAcessivel = el.hasAttribute('aria-label') || el.hasAttribute('alt');
+
+        if (temTexto || temAtributoAcessivel) {
+            el.setAttribute('tabindex', '0');
+        }
+    });
+}
+
+function desativarNavegacaoTotal() {
+    const elementosComTab = document.querySelectorAll('[tabindex="0"]');
+    elementosComTab.forEach(function (el) {
+        if (!el.matches('a, button, input, select, textarea')) {
+            el.removeAttribute('tabindex');
+        }
+    });
+}
+
+// 2. ALTERNA O LEITOR NO BOTÃO
+if (leitorTela) {
+    leitorTela.addEventListener('click', function () {
+        if (!('speechSynthesis' in window)) {
+            alert('Seu navegador não suporta leitura de texto.');
+            return;
+        }
+
+        modoLeituraAtivo = !modoLeituraAtivo;
+        localStorage.setItem('modoLeitura', modoLeituraAtivo ? 'ativo' : 'inativo');
+
+        if (modoLeituraAtivo) {
+            ativarNavegacaoTotal();
+            lerTexto("Modo de leitura ativado.");
+            fecharPainelAcessibilidade();
+        } else {
+            desativarNavegacaoTotal();
+            lerTexto("Modo de leitura desativado.");
+            ultimoElementoClicado = null;
+        }
+    });
+}
+
+// 3. LEITURA NO FOCO (TAB) COM IDENTIFICAÇÃO DE LISTAS
+document.addEventListener('focusin', function (evento) {
+    if (!modoLeituraAtivo) return;
+
+    const elemento = evento.target;
+    if (elemento.closest('.painel-acessibilidade') || elemento.closest('[vw]')) return;
+
+    let textoParaLer = extrairTextoElemento(elemento);
+
+    // Ajusta a leitura caso o elemento seja uma lista inteira (ul/ol)
+    if (elemento.tagName === 'UL') {
+        textoParaLer = "Lista de itens: " + textoParaLer;
+    } else if (elemento.tagName === 'OL') {
+        textoParaLer = "Lista numerada: " + textoParaLer;
+    }
+
+    if (textoParaLer) {
+        lerTexto(textoParaLer);
+    }
+});
+
+// 4. CONFIRMAÇÃO DE CLIQUE (1º CLIQUE LÊ, 2º EXECUTA)
+document.addEventListener('click', function (evento) {
+    if (!modoLeituraAtivo) return;
+
+    const elementoInterativo = evento.target.closest('a, button');
+
+    if (!elementoInterativo || elementoInterativo.closest('.painel-acessibilidade')) {
+        return;
+    }
+
+    if (ultimoElementoClicado !== elementoInterativo) {
+        evento.preventDefault();
+        evento.stopPropagation();
+
+        const textoParaLer = extrairTextoElemento(elementoInterativo);
+        lerTexto(textoParaLer);
+
+        ultimoElementoClicado = elementoInterativo;
+    } else {
+        ultimoElementoClicado = null;
+    }
+}, true);
+
+// 5. AUXILIARES
+function extrairTextoElemento(el) {
+    return el.getAttribute('aria-label') || 
+           el.alt || 
+           el.innerText || 
+           el.title || 
+           "";
+}
+
+function lerTexto(texto) {
+    if (!texto.trim()) return;
+    window.speechSynthesis.cancel();
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR';
+    fala.rate = 1;
+    window.speechSynthesis.speak(fala);
 }
 
 (function () {
@@ -470,3 +570,11 @@ if (leitorTela) {
     atualizarEstado();
     iniciarAutoplay();
 })();
+
+// Aguarda o DOM carregar completamente
+document.addEventListener('DOMContentLoaded', function () {
+  // Inicializa o Widget oficial do VLibras
+  if (window.VLibras) {
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  }
+});
