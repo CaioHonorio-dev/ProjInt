@@ -337,10 +337,14 @@ header,
   margin: 7px 0 10px;
 }
 
-.secao-subtitulo {
+.secao-subtitulo, .secao-subtitulo-i {
   color: var(--cor-texto-suave);
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.secao-subtitulo-i > strong {
+  color: var(--cor-primaria);
 }
 
 
@@ -2492,6 +2496,7 @@ body.links-sublinhados a {
 .carrossel-slide-link:hover {
   box-shadow: var(--sombra-hover, 0 10px 25px rgba(0, 0, 0, 0.12));
   transform: translateY(-2px);
+  filter: brightness(1.12);
 }
 
 .carrossel-imagem-wrapper {
@@ -2650,5 +2655,90 @@ body.modo-escuro .carrossel-ponto.ativo {
 
   .carrossel {
     gap: 8px;
+  }
+}
+
+/* =========================================================
+   AJUSTES DE RESPONSIVIDADE — cole no final do seu CSS
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .sobre-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .sobre-container {
+    grid-template-columns: 1fr;
+  }
+
+  .apresentacao {
+    padding: 14vh 6vw;
+  }
+
+  .card-repositorio,
+  .card-busca {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    min-height: auto;
+    max-height: none;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-acoes .botao {
+    width: 100%;
+  }
+
+  .nucleos-grid {
+    margin: 0 4vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-titulo {
+    font-size: 1.7rem;
+  }
+
+  .secao-titulo {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================================================
+   CORREÇÃO — altura fixa causando sobreposição na busca
+   Cole no final do css/style.css (sobrescreve as regras antigas)
+   ========================================================= */
+
+.card-repositorio,
+.card-busca {
+  max-height: none;
+  min-height: auto;
+  margin-bottom: 48px;
+  margin-top: 32px;
+}
+
+.result-area {
+  max-height: none;
+  min-height: auto;
+}
+
+@media (max-width: 650px) {
+  .card-repositorio,
+  .card-busca {
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+
+  #paginacao {
+    margin-top: 32px;
   }
 }

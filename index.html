@@ -20,8 +20,8 @@
         <li><a href="index.html" class="nav-link ativo">Início</a></li>
         <li><a href="explicacao.html" class="nav-link">Como fazer seu Projeto</a></li>
         <li><a href="repositorio.html" class="nav-link">Repositório de Núcleos</a></li>
-        <li><a href="normasabnt.html" class="nav-link">Normas ABNT</a></li>
-        <li><a href="slide.html" class="nav-link">Slides da Apresentação</a></li>
+        <li><a href="normasabnt.html" class="nav-link">Documentação</a></li>
+        <li><a href="slide.html" class="nav-link">Slides e Apresentação</a></li>
       </ul>
     </nav>
 
@@ -76,11 +76,7 @@
       </div>
       </aside>
 
-    <button class="menu-toggle" type="button" aria-label="Abrir menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+
   </div>
 </header>
 
@@ -92,8 +88,8 @@
       <div class="secao-cabecalho centralizado">
         <span class="eyebrow">COMEÇE POR AQUI</span>
         <h2 class="secao-titulo">Como usar esta plataforma</h2>
-        <p class="secao-subtitulo">
-          Quatro paradas para o seu Projeto Integrador sair do zero até a banca final.
+        <p class="secao-subtitulo-i">
+          Quatro paradas para o seu Projeto Integrador sair do zero até a banca final. <strong>clique em qualquer uma delas</strong> para acessar os conteúdos e materiais de apoio.
         </p>
       </div>
   
@@ -110,6 +106,21 @@
           <ul class="carrossel-trilha" id="carrosselTrilha">
   
             <li class="carrossel-slide">
+              <a class="carrossel-slide-link" aria-label="Entenda as etapas do projeto">
+                <div class="carrossel-imagem-wrapper">
+                  <div class="carrossel-imagem-fallback">
+                  </div>
+                  <img src="css/imgs/apresentacao.png" alt="Etapas do Projeto Integrador"
+                    class="carrossel-imagem" onerror="this.style.display='none'">
+                </div>
+                <div class="carrossel-legenda">
+                  <span class="carrossel-numero">00</span>
+                  <h3>Conheça nossa página</h3>
+                </div>
+              </a>
+            </li>
+
+            <li class="carrossel-slide">
               <a class="carrossel-slide-link" href="explicacao.html" aria-label="Entenda as etapas do projeto">
                 <div class="carrossel-imagem-wrapper">
                   <div class="carrossel-imagem-fallback">
@@ -121,7 +132,7 @@
                     </svg>
                     <span>Imagem em breve</span>
                   </div>
-                  <img src="css/imgs/carrossel/passo-1-etapas.jpg" alt="Etapas do Projeto Integrador"
+                  <img src="css/imgs/slide1.png" alt="Etapas do Projeto Integrador"
                     class="carrossel-imagem" onerror="this.style.display='none'">
                 </div>
                 <div class="carrossel-legenda">
@@ -142,7 +153,7 @@
                     </svg>
                     <span>Imagem em breve</span>
                   </div>
-                  <img src="css/imgs/carrossel/passo-2-abnt.jpg" alt="Normas ABNT para o trabalho escrito"
+                  <img src="css/imgs/slide2.png" alt="Documentação para o trabalho escrito"
                     class="carrossel-imagem" onerror="this.style.display='none'">
                 </div>
                 <div class="carrossel-legenda">
@@ -162,7 +173,7 @@
                     </svg>
                     <span>Imagem em breve</span>
                   </div>
-                  <img src="css/imgs/carrossel/passo-3-slides.jpg" alt="Preparação dos slides e do pitch"
+                  <img src="css/imgs/slide3.png" alt="Preparação dos slides e do pitch"
                     class="carrossel-imagem" onerror="this.style.display='none'">
                 </div>
                 <div class="carrossel-legenda">
@@ -184,7 +195,7 @@
                     </svg>
                     <span>Imagem em breve</span>
                   </div>
-                  <img src="css/imgs/carrossel/passo-4-repositorio.jpg" alt="Repositório de trabalhos por núcleo"
+                  <img src="css/imgs/slide4.png" alt="Repositório de trabalhos por núcleo"
                     class="carrossel-imagem" onerror="this.style.display='none'">
                 </div>
                 <div class="carrossel-legenda">
@@ -329,9 +340,12 @@
   </div>
 </section>
 
-  <!-- ===================== SEÇÃO REPOSITÓRIO ===================== -->
-  <section class="nucleos" id="nucleos">
-    <div class="nucleos-container">
+<!-- Secão começar -->
+
+
+<!-- ===================== SEÇÃO REPOSITÓRIO ===================== -->
+<section class="nucleos" id="nucleos">
+  <div class="nucleos-container">
       <div class="repositorio-decoracao">
         <span></span>
         <div class="icone-chapeu">
@@ -361,104 +375,126 @@
       </a>
     </div>
   </section>
-
-    </div>
-  </section>
-
+  
+  <section class="nucleos" id="nucleos">
+      <div class="nucleos-container">
+        <div class="repositorio-decoracao">
+          <div class="icone-chapeu">
+            <h1>✓</h1>
+          </div>
+        </div>
+        <h2 class="secao-titulo">
+          Não sabe por onde começar?
+        </h2>
+        <div class="linha-titulo">
+          <span></span>
+        </div>
+        <p class="secao-subtitulo">
+          Acesse as <strong>etapas do projeto</strong> e descubra como organizar seu trabalho, desde o primeiro rascunho até a apresentação final.
+        </p>
+        <a href="explicacao.html" class="botao botao-repositorio">
+          Acessar etapas do projeto
+        </a>
+      </div>
+    </section>  
   <!-- ===================== RODAPÉ UNIFICADO ===================== -->
   <!-- ===================== FOOTER ===================== -->
-  <footer class="rodape">
-    <div class="rodape-container">
-  
-      <!-- Coluna 1 — Marca -->
-      <div class="rodape-col rodape-marca">
-        <img src="css/imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="rodape-logo" />
-        <p class="rodape-descricao">
-          Plataforma de apoio à criação de Projetos Integradores, do primeiro
-          rascunho à banca final.
-        </p>
-      </div>
-  
-      <!-- Coluna 2 — Links rápidos -->
-      <nav class="rodape-col rodape-links" aria-label="Links rápidos">
-        <h4 class="rodape-titulo">Links rápidos</h4>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="explicacao.html">Como fazer seu Projeto</a></li>
-          <li><a href="repositorio.html">Repositório de Núcleos</a></li>
-        </ul>
-      </nav>
-  
-      <!-- Coluna 3 — Contato / institucional -->
-      <div class="rodape-col rodape-contato">
-        <h4 class="rodape-titulo">SENAI Paraíba</h4>
-        <ul>
-          <li><a href="https://fiepb.com.br/senai" target="_blank" rel="noopener noreferrer">fiepb.com.br</a></li>
-          <li><a href="mailto:faleconosco@fiepb.org.br" target="_blank" rel="noopener noreferrer">faleconosco@fiepb.org.br</a></li>
-          <li><a href="https://maps.app.goo.gl/RoBbPE47nx1iVvTeA" target="_blank" rel="noopener noreferrer">R. Dom Pedro II, 788 - Prata, Campina Grande - PB, 58400-565</a></li>
-        </ul>
-      </div>
-  
+<footer class="rodape">
+        <div class="rodape-container">
+
+            <!-- Coluna 1 — Marca -->
+            <div class="rodape-col rodape-marca">
+                <img src="css/imgs/SENAI_logo_2024.png" alt="Logo SENAI" class="rodape-logo" />
+                <p class="rodape-descricao">
+                    Plataforma de apoio à criação de Projetos Integradores, do primeiro
+                    rascunho à banca final.
+                </p>
+            </div>
+
+            <!-- Coluna 2 — Links rápidos -->
+            <nav class="rodape-col rodape-links" aria-label="Links rápidos">
+                <h4 class="rodape-titulo">Links rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="explicacao.html">Como fazer seu Projeto</a></li>
+                    <li><a href="repositorio.html">Repositório de Núcleos</a></li>
+                    <li><a href="normasabnt.html">Documentação</a></li>
+                    <li><a href="slide.html">Slides e Apresentação</a></li>
+                </ul>
+            </nav>
+
+                <!-- Coluna 3 — Contato / institucional -->
+                <div class="rodape-col rodape-contato">
+                    <h4 class="rodape-titulo">SENAI Paraíba</h4>
+                    <ul>
+                        <li><a href="https://fiepb.com.br/senai" target="_blank" rel="noopener noreferrer">fiepb.com.br</a></li>
+                        <li><a href="mailto:faleconosco@fiepb.org.br" target="_blank"
+                                rel="noopener noreferrer">faleconosco@fiepb.org.br</a></li>
+                        <li><a href="https://maps.app.goo.gl/RoBbPE47nx1iVvTeA" target="_blank" rel="noopener noreferrer">R. Dom Pedro
+                                II, 788 - Prata, Campina Grande - PB, 58400-565</a></li>
+                    </ul>
+                </div>
+
 <!-- Coluna 4 — Redes sociais -->
 <div class="rodape-col rodape-social">
-  <h4 class="rodape-titulo">Siga o SENAI</h4>
-  <ul class="rodape-social-lista">
-    <!-- TODO: troque "#" pelos links oficiais do SENAI-PB -->
-    <li>
-      <a href="https://www.instagram.com/senaiparaiba/" target="_blank" rel="noopener noreferrer"
-        aria-label="Instagram do SENAI Paraíba">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
-          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6" />
-          <circle cx="17.1" cy="6.9" r="1.1" fill="currentColor" />
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.facebook.com/senaiparaiba/?locale=pt_BR" target="_blank" rel="noopener noreferrer"
-        aria-label="Facebook do SENAI Paraíba">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path
-            d="M14 8.5h2.5V5.2h-2.7c-2.4 0-3.8 1.5-3.8 3.9v2H7.8v3.3h2.2V21h3.4v-6.6h2.4l.5-3.3h-2.9V9.3c0-.6.3-.8.9-.8Z"
-            fill="currentColor" />
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.youtube.com/senaiparaiba" target="_blank" rel="noopener noreferrer"
-        aria-label="YouTube do SENAI Paraíba">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="2.7" y="6" width="18.6" height="12" rx="4" stroke="currentColor" stroke-width="1.6" />
-          <path d="M10.3 9.6v4.8l4.4-2.4-4.4-2.4Z" fill="currentColor" />
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a href="https://br.linkedin.com/company/senai-paraiba" target="_blank" rel="noopener noreferrer"
-        aria-label="LinkedIn do SENAI Paraíba">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6" />
-          <path d="M7.5 10.3v6.2M7.5 7.7v.02M11.3 16.5v-3.6c0-1.4.9-2.3 2.1-2.3 1.2 0 1.9.8 1.9 2.3v3.6"
-            stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-        </svg>
-      </a>
-    </li>
-  </ul>
+    <h4 class="rodape-titulo">Siga o SENAI</h4>
+    <ul class="rodape-social-lista">
+        <!-- TODO: troque "#" pelos links oficiais do SENAI-PB -->
+        <li>
+            <a href="https://www.instagram.com/senaiparaiba/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram do SENAI Paraíba">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+                    <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6" />
+                    <circle cx="17.1" cy="6.9" r="1.1" fill="currentColor" />
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/senaiparaiba/?locale=pt_BR" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook do SENAI Paraíba">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                        d="M14 8.5h2.5V5.2h-2.7c-2.4 0-3.8 1.5-3.8 3.9v2H7.8v3.3h2.2V21h3.4v-6.6h2.4l.5-3.3h-2.9V9.3c0-.6.3-.8.9-.8Z"
+                        fill="currentColor" />
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/senaiparaiba" target="_blank" rel="noopener noreferrer"
+                aria-label="YouTube do SENAI Paraíba">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="2.7" y="6" width="18.6" height="12" rx="4" stroke="currentColor" stroke-width="1.6" />
+                    <path d="M10.3 9.6v4.8l4.4-2.4-4.4-2.4Z" fill="currentColor" />
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="https://br.linkedin.com/company/senai-paraiba" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn do SENAI Paraíba">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.6" />
+                    <path d="M7.5 10.3v6.2M7.5 7.7v.02M11.3 16.5v-3.6c0-1.4.9-2.3 2.1-2.3 1.2 0 1.9.8 1.9 2.3v3.6"
+                        stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+            </a>
+        </li>
+    </ul>
 </div>
 
 </div>
-  
-    <!-- Barra inferior -->
-    <div class="rodape-inferior">
-      <p class="rodape-texto">
-        &copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de Projetos Integradores.
-      </p>
-      <ul class="rodape-legais">
-        <li><a href="https://fiepb.com.br/politica-de-privacidade">Política de Privacidade</a></li>
-        <li><a href="https://fiepb.com.br/termos-de-uso">Termos de Uso</a></li>
-      </ul>
-    </div>
-  </footer>
+
+        <!-- Barra inferior -->
+        <div class="rodape-inferior">
+            <p class="rodape-texto">
+                &copy; <span id="ano-atual"></span> SENAI. Plataforma de apoio à criação de Projetos Integradores.
+            </p>
+            <ul class="rodape-legais">
+                <li><a href="https://fiepb.com.br/politica-de-privacidade">Política de Privacidade</a></li>
+                <li><a href="https://fiepb.com.br/termos-de-uso">Termos de Uso</a></li>
+            </ul>
+        </div>
+</footer>
 
   <script src="js/script.js"></script>
   <script src="js/script2.js"></script>

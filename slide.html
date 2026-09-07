@@ -22,21 +22,61 @@
                     <li><a href="index.html" class="nav-link">Início</a></li>
                     <li><a href="explicacao.html" class="nav-link">Como fazer seu Projeto</a></li>
                     <li><a href="repositorio.html" class="nav-link">Repositório de Núcleos</a></li>
-                    <li><a href="normasabnt.html" class="nav-link">Normas ABNT</a></li>
-                    <li><a href="slide.html" class="nav-link ativo">Slides da Apresentação</a></li>
+                    <li><a href="normasabnt.html" class="nav-link">Documentação</a></li>
+                    <li><a href="slide.html" class="nav-link ativo">Slides e Apresentação</a></li>
                 </ul>
             </nav>
 
             <!-- ===================== MODO ESCURO ===================== -->
-            <button class="tema-toggle" id="temaToggle" aria-label="Ativar modo escuro">
-                <svg id="iconeTema" width="25" height="25" viewBox="0 0 24 24"></svg>
-            </button>
-
-            <button class="menu-toggle" type="button" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+          <div class="acoes-header">
+        <button class="botao-acessibilidade" aria-label="Abrir acessibilidade">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="5" r="1.5"></circle>
+            <circle cx="12" cy="12" r="1.5"></circle>
+            <circle cx="12" cy="19" r="1.5"></circle>
+          </svg>
+        </button>
+        <div class="acessibilidade-overlay" id="acessibilidadeOverlay"></div>
+        <aside class="painel-acessibilidade" id="painelAcessibilidade">
+          <button class="fechar-acessibilidade" id="fecharAcessibilidade" aria-label="Fechar painel" type="button"> × </button>
+            <div class="painel-acessibilidade-conteudo">
+              <!-- AUMENTAR LETRAS -->
+              <button class="opcao-acessibilidade" id="aumentarFonte" type="button" aria-label="Aumentar tamanho do texto">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 19 8 5l4 14M5.5 14h5" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M15 8h6M18 5v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+                <span>Aumentar Texto</span>
+              </button>
+              <!-- DIMINUIR LETRAS -->
+              <button class="opcao-acessibilidade" id="diminuirFonte" type="button" aria-label="Diminuir tamanho do texto">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 19 8 5l4 14M5.5 14h5" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M15 8h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+                <span>Diminuir Texto</span>
+              </button>
+              <!-- MODO ESCURO -->
+              <button class="opcao-acessibilidade" id="temaToggle" type="button" aria-label="Ativar modo escuro">
+                <svg id="iconeTema" viewBox="0 0 24 24" aria-hidden="true"></svg>
+                <span>Modo Escuro</span>
+              </button>
+              <!-- ALTO FALANTE -->
+              <button class="opcao-acessibilidade" id="leitorTela" type="button" aria-label="Ler conteúdo da página">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 10v4h4l5 4V6L8 10H4Z" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round" />
+                  <path d="M16 9c1 .8 1.5 1.8 1.5 3S17 14.2 16 15" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" />
+                  <path d="M18.5 6.5c2 1.5 3 3.3 3 5.5s-1 4-3 5.5" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" />
+                </svg>
+                <span>Leitor de Texto</span>
+              </button>
+            </div>
+      </div>
         </div>
     </header>
 
@@ -44,7 +84,7 @@
         <!-- Hero -->
         <section class="hero">
             <div class="hero-container">
-                <span class="tag-hero">GUIA DE APOIO • SLIDES DA APRESENTAÇÃO</span>
+                <span class="tag-hero">GUIA DE APOIO • Slides e Apresentação</span>
                 <h1 class="hero-titulo">Como montar os slides da sua apresentação</h1>
                 <p class="hero-descricao">
                     Slide a slide do modelo padrão do SENAI: o que colocar em cada um,
@@ -512,8 +552,8 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="explicacao.html">Como fazer seu Projeto</a></li>
                     <li><a href="repositorio.html">Repositório de Núcleos</a></li>
-                    <li><a href="normas-abnt.html">Normas ABNT</a></li>
-                    <li><a href="slide.html">Slides da Apresentação</a></li>
+                    <li><a href="normasabnt.html">Documentação</a></li>
+                    <li><a href="slide.html">Slides e Apresentação</a></li>
                 </ul>
             </nav>
 
@@ -588,7 +628,7 @@
                 <li><a href="https://fiepb.com.br/termos-de-uso">Termos de Uso</a></li>
             </ul>
         </div>
-    </footer>
+</footer>
 
     <script src="js/script2.js"></script>
 </body>
