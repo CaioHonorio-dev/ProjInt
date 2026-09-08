@@ -15,6 +15,17 @@
 
 <body>
 
+<!-- ===== Aviso "Em breve" ===== -->
+<div class="aviso-overlay" id="avisoOverlay">
+  <div class="aviso-modal" role="alertdialog" aria-labelledby="avisoTitulo" aria-describedby="avisoTexto">
+    <button class="aviso-fechar" id="avisoFechar" aria-label="Fechar aviso" type="button">&times;</button>
+    <span class="aviso-selo">Aviso</span>
+    <h2 id="avisoTitulo">Ainda não disponível</h2>
+    <p id="avisoTexto">Clique em <strong>Entrar</strong> para entrar no site.</p>
+    <button class="aviso-botao" id="avisoOk" type="button">Entendi</button>
+  </div>
+</div>
+
     <div class="page">
 
         <!-- ===== Painel de marca ===== -->
@@ -30,12 +41,11 @@
 
             <div class="brand-content">
                 <div class="brand-logo">
-                    <span class="logo-mark">SENAI</span>
-                    <span class="logo-sub">Serviço Nacional de<br>Aprendizagem Industrial</span>
+                    <img src="css/imgs/SENAI_logo_2024.png" alt="Logo do SENAI">
                 </div>
 
                 <div class="brand-copy">
-                    <span class="eyebrow">Repositório Oficial SENAI</span>
+                    <span class="eyebrow">CRIADO POR ESTUDANTES SENAI</span>
                     <h1>Seu Projeto Integrador,<br>do primeiro rascunho<br>à <em>banca final</em>.</h1>
                     <p>Modelos, orientações por etapa e o acervo de trabalhos organizados por núcleo — tudo em um só
                         lugar.</p>
@@ -43,15 +53,15 @@
 
                 <ul class="brand-features">
                     <li>
-                        <span class="feat-icon">🎓</span>
+                        <span class="feat-icon">01</span>
                         <span>Modelos e orientações por etapa</span>
                     </li>
                     <li>
-                        <span class="feat-icon">📚</span>
+                        <span class="feat-icon">02</span>
                         <span>Acervo organizado por curso e núcleo</span>
                     </li>
                     <li>
-                        <span class="feat-icon">☁️</span>
+                        <span class="feat-icon">03</span>
                         <span>Acesso rápido e sempre atualizado</span>
                     </li>
                 </ul>
@@ -128,14 +138,14 @@
 
                     <span class="field-error" id="form-error" role="alert"></span>
 
-                    <button type="submit" class="btn-primary" id="submit-btn">
+                    <a class="btn-primary" id="submit-btn" href="index.html">
                         <span class="btn-label">Entrar</span>
                         <span class="btn-spinner" aria-hidden="true"></span>
-                    </button>
+                    </a>
 
                     <div class="divider"><span>ou</span></div>
 
-                    <p class="signup-hint">Ainda não tem acesso? <a href="#">Fale com a secretaria do seu núcleo</a></p>
+                    <p class="signup-hint">Ainda não tem acesso? <a>Fale com a coordenação.</a></p>
                 </form>
 
             </div>

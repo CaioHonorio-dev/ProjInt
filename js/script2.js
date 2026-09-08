@@ -578,3 +578,19 @@ document.addEventListener('DOMContentLoaded', function () {
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   }
 });
+
+(function () {
+    const overlay = document.getElementById('avisoOverlay');
+    const fechar = document.getElementById('avisoFechar');
+    const ok = document.getElementById('avisoOk');
+
+    function fecharAviso() {
+      overlay.classList.add('oculto');
+    }
+
+    fechar?.addEventListener('click', fecharAviso);
+    ok?.addEventListener('click', fecharAviso);
+    overlay?.addEventListener('click', (e) => {
+      if (e.target === overlay) fecharAviso();
+    });
+  })();

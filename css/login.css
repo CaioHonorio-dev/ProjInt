@@ -54,6 +54,111 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* =========================================================
+   MODAL DE AVISO — "EM BREVE"
+   Cole no final do css/login.css
+   ========================================================= */
+
+.aviso-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 23, 48, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1.5rem;
+}
+
+.aviso-overlay.oculto {
+  display: none;
+}
+
+.aviso-modal {
+  position: relative;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 2rem 1.75rem;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+}
+
+.aviso-fechar {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--ink-400);
+  cursor: pointer;
+}
+
+.aviso-fechar:hover {
+  color: var(--ink-900);
+}
+
+.aviso-selo {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange-600);
+  background: rgba(255, 122, 26, 0.12);
+  border: 1px solid rgba(255, 122, 26, 0.35);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.9rem;
+}
+
+.aviso-modal h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 0.5rem;
+}
+
+.aviso-modal p {
+  color: var(--ink-600);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.aviso-modal p strong {
+  color: var(--navy-900);
+}
+
+.aviso-botao {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1.75rem;
+  background: linear-gradient(135deg, var(--orange-500), var(--orange-600));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-btn);
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+.aviso-botao:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 400px) {
+  .aviso-modal {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
 h1,
 h2 {
     font-family: var(--font-display);
@@ -158,29 +263,15 @@ button {
 .brand-logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    height: 1.5rem;
 }
 
-.logo-mark {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: 0.02em;
-    color: #fff;
+.brand-logo img{
+    height: 6vh;
+    width: auto;
+    filter: brightness(0) invert(1);
 }
 
-.logo-mark::after {
-    content: ".";
-    color: var(--orange-500);
-}
-
-.logo-sub {
-    font-size: 0.65rem;
-    line-height: 1.25;
-    color: rgba(255, 255, 255, 0.65);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    padding-left: 0.75rem;
-}
 
 .eyebrow {
     display: inline-flex;
@@ -243,7 +334,7 @@ button {
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    font-size: 1rem;
+    font-size: 0.75rem;
     flex-shrink: 0;
 }
 
@@ -509,6 +600,10 @@ button {
     filter: saturate(0.7);
 }
 
+.btn-label {
+    text-decoration:none;
+}
+
 .btn-spinner {
     display: none;
     width: 16px;
@@ -560,11 +655,6 @@ button {
     font-weight: 600;
     text-decoration: none;
 }
-
-.signup-hint a:hover {
-    text-decoration: underline;
-}
-
 .legal {
     font-size: 0.75rem;
     color: var(--ink-400);
@@ -678,4 +768,285 @@ button {
         animation-duration: 0.001ms !important;
         transition-duration: 0.001ms !important;
     }
+}
+
+/* =========================================================
+   REFORÇO DE RESPONSIVIDADE — LOGIN
+   Cole no final do css/login.css
+   ========================================================= */
+
+html, body {
+  overflow-x: hidden;
+}
+
+.page {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.input-wrap input {
+  min-width: 0;
+}
+
+/* Mostra o mini-logo no card assim que o painel de marca vira topo */
+@media (max-width: 940px) {
+  .form-card-logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Telas baixas (celular deitado) — painel de marca não pode dominar a tela */
+@media (max-width: 940px) and (max-height: 480px) {
+  .brand-panel {
+    min-height: auto;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .brand-copy p,
+  .brand-features,
+  .dots {
+    display: none;
+  }
+
+  .form-panel {
+    margin-top: 0;
+  }
+}
+
+/* Telas muito estreitas — folga extra no card */
+@media (max-width: 360px) {
+  .form-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .field-row {
+    align-items: flex-start;
+  }
+}
+/* =========================================================
+   SUAVIZAR FORMAS DECORATIVAS NO MOBILE
+   Cole no final do css/login.css (depois do patch anterior)
+   ========================================================= */
+
+@media (max-width: 940px) {
+  .shape-a {
+    width: 55vw;
+    max-width: 260px;
+    right: -18vw;
+    top: -16vw;
+    clip-path: none;
+    opacity: 0.5;
+    transform: rotate(20deg);
+  }
+
+  .shape-b {
+    width: 42vw;
+    max-width: 200px;
+    right: -14vw;
+    bottom: -14vw;
+    opacity: 0.35;
+  }
+
+  .brand-panel {
+    padding-top: 1.75rem;
+  }
+
+  .brand-content {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .shape-a {
+    width: 48vw;
+    max-width: 200px;
+    top: -14vw;
+    right: -16vw;
+  }
+
+  .shape-b {
+    display: none;
+  }
+}
+/* =========================================================
+   NOVO LAYOUT MOBILE — LOGIN
+   Cole por ÚLTIMO no css/login.css (depois de tudo o mais)
+   ========================================================= */
+
+@media (max-width: 720px) {
+  .page {
+    display: block !important;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Remove de vez as formas decorativas — são a causa da bagunça */
+  .brand-shapes {
+    display: none !important;
+  }
+
+  .brand-panel {
+    position: static !important;
+    min-height: 0 !important;
+    padding: 2.25rem 1.5rem 2rem !important;
+    background: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-950) 100%) !important;
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .brand-content {
+    align-items: center;
+    text-align: center;
+    gap: 0.9rem !important;
+  }
+
+  .brand-logo {
+    justify-content: center;
+  }
+
+  .logo-sub {
+    display: none;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.25rem;
+  }
+
+  .brand-copy h1 {
+    font-size: 1.45rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .brand-copy p {
+    margin: 0.6rem auto 0 !important;
+    max-width: 30ch;
+    font-size: 0.85rem !important;
+  }
+
+  /* Elementos que só fazem sentido com mais espaço vertical */
+  .brand-features,
+  .brand-footer,
+  .dots {
+    display: none !important;
+  }
+
+  .form-panel {
+    margin-top: 0 !important;
+    position: static !important;
+    padding: 1.5rem 1.25rem 2.5rem !important;
+  }
+
+  .form-card {
+    border-radius: 16px;
+    box-shadow: 0 10px 26px -12px rgba(10, 32, 80, 0.22);
+    border: 1px solid var(--border);
+  }
+
+  /* Evita repetir o nome SENAI duas vezes (já aparece no topo) */
+  .form-card-logo {
+    display: none !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-copy h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .form-card {
+    padding: 1.25rem 1rem !important;
+  }
+}
+/* =========================================================
+   LAYOUT MOBILE + TABLET — LOGIN
+   Cole por ÚLTIMO no css/login.css
+   (substitui o bloco @media (max-width: 720px) anterior)
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .page {
+    display: block !important;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Remove de vez as formas decorativas — causa da bagunça */
+  .brand-shapes {
+    display: none !important;
+  }
+
+  .brand-panel {
+    position: static !important;
+    min-height: 0 !important;
+    padding: clamp(2rem, 5vw, 3rem) 1.75rem clamp(1.75rem, 4vw, 2.5rem) !important;
+    background: linear-gradient(160deg, var(--navy-900) 0%, var(--navy-950) 100%) !important;
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .brand-content {
+    align-items: center;
+    text-align: center;
+    gap: clamp(0.9rem, 2vw, 1.4rem) !important;
+    max-width: 34rem;
+    margin: 0 auto;
+  }
+
+  .brand-logo {
+    justify-content: center;
+  }
+
+  .logo-sub {
+    display: none;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.25rem;
+  }
+
+  .brand-copy h1 {
+    font-size: clamp(1.4rem, 3.6vw, 2rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  .brand-copy p {
+    margin: 0.6rem auto 0 !important;
+    max-width: 40ch;
+    font-size: clamp(0.85rem, 1.6vw, 0.98rem) !important;
+  }
+
+  .brand-features,
+  .brand-footer,
+  .dots {
+    display: none !important;
+  }
+
+  .form-panel {
+    margin-top: 0 !important;
+    position: static !important;
+    padding: clamp(1.5rem, 4vw, 2.25rem) 1.25rem clamp(2rem, 5vw, 3rem) !important;
+  }
+
+  .form-card {
+    max-width: 460px;
+    border-radius: 16px;
+    box-shadow: 0 10px 26px -12px rgba(10, 32, 80, 0.22);
+    border: 1px solid var(--border);
+  }
+
+  /* Evita repetir o nome SENAI duas vezes (já aparece no topo) */
+  .form-card-logo {
+    display: none !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-copy h1 {
+    font-size: 1.3rem !important;
+  }
+
+  .form-card {
+    padding: 1.25rem 1rem !important;
+  }
 }

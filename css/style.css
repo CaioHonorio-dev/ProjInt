@@ -2742,3 +2742,16 @@ body.modo-escuro .carrossel-ponto.ativo {
     margin-top: 32px;
   }
 }
+
+/* =========================================================
+   BOTÃO "PÁGINA INICIAL" NO PAINEL — SÓ MOBILE/TABLET
+   ========================================================= */
+.oculto-desktop {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .oculto-desktop {
+    display: flex !important;
+  }
+}
